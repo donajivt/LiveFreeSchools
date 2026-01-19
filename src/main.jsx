@@ -1,21 +1,13 @@
 import React from 'react';
-import { Button, Card } from 'antd';
+import ReactDOM from 'react-dom/client';
+import { ConfigProvider } from 'antd';
+import App from './App';
+// import './index.css'; 
 
-const App = () => {
-  return (
-    <div style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center', 
-      height: '100vh', 
-      background: '#f0f2f5' 
-    }}>
-      <Card title="Estado Base" style={{ width: 300 }}>
-        <p>Hola Mundo</p>
-        <Button type="primary">Botón de prueba</Button>
-      </Card>
-    </div>
-  );
-};
-
-export default App;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <ConfigProvider>
+      <App />
+    </ConfigProvider>
+  </React.StrictMode>
+);
