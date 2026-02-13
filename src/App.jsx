@@ -3,7 +3,6 @@ import { Button, Card, Tabs } from 'antd';
 import { UsersListView } from "./features/users";
 
 const App = () => {
-  // Definimos los elementos de las pestañas
   const items = [
     {
       key: '1',
