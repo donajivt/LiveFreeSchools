@@ -8,8 +8,8 @@ export const useCollectionAction = ({
   executeOnInit = true,
   initialValue = null,
   collection,
-  onSuccess = () => {},
-  onError = () => {},
+  onSuccess = () => { },
+  onError = () => { },
 }) => {
   const [dbValue, setDbValue] = useLocalStorage(collection, initialValue);
   const [loading, execute, error] = useAction({
@@ -47,7 +47,6 @@ export const CollectionAction = ({
   useEffect(() => {
     if (!actionName) return;
     setServices((prev) => {
-      console.log("actionName", actionName);
       const _serviceName = actionName.split(".")[0];
       const _actionName = actionName.split(".")[1];
 

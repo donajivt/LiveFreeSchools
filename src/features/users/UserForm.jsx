@@ -3,7 +3,6 @@ import { Form, Input, InputNumber, Select, Button, Card, Avatar, Row, Col, Space
 import { UserOutlined } from "@ant-design/icons";
 
 const DEFAULT_USER = {
-  id: 1,
   name: "Rommel",
   countryId: 3,
   position: "Developer",
@@ -16,16 +15,20 @@ const DEFAULT_USER = {
 export const UserForm = ({
   countries = [],
   initialValue = {},
-  onEdit,
-  onAdd,
+  onSubmit,
+  isExpanded,
+  setIsExpanded
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
   const [form] = Form.useForm();
+  const name = Form.useWatch("name", form);
+  const position = Form.useWatch("position", form);
+  const avatar = Form.useWatch("avatar", form);
 
   useEffect(() => {
-    if (initialValue && Object.keys(initialValue).length > 0) {
+    if (initialValue) {
       form.setFieldsValue(initialValue);
     } else {
+      form.resetFields();
       form.setFieldsValue(DEFAULT_USER);
     }
   }, [initialValue, form]);
@@ -35,18 +38,6 @@ export const UserForm = ({
     return countries.map((c) => ({ label: c.name, value: c.id }));
   }, [countries]);
 
-  const handleFinish = (values) => {
-    setIsExpanded(false);
-
-    if (!!initialValue?.id) {
-      const userToUpdate = { ...values, id: initialValue.id };
-      console.log("editando user", userToUpdate);
-      onEdit?.(userToUpdate);
-    } else {
-      console.log("agregando user", values);
-      onAdd?.(values);
-    }
-  };
 
   const handleReset = () => {
     form.resetFields();
@@ -57,9 +48,6 @@ export const UserForm = ({
     }
   };
 
-  const avatarUrl = Form.useWatch('avatar', form);
-  const nameValue = Form.useWatch('name', form);
-  const positionValue = Form.useWatch('position', form);
 
   return (
     <div style={{ marginBottom: 24 }}>
@@ -72,11 +60,11 @@ export const UserForm = ({
       </Button>
 
       {isExpanded && (
-        <Card title="User" bordered={false} style={{ width: '100%', marginBottom: 24 }}>
+        <Card title="User" style={{ width: '100%', marginBottom: 24 }}>
           <Form
             form={form}
             layout="vertical"
-            onFinish={handleFinish}
+            onFinish={onSubmit}
             initialValues={initialValue?.id ? initialValue : DEFAULT_USER}
           >
             <Row gutter={16}>
@@ -86,9 +74,19 @@ export const UserForm = ({
                     <Form.Item
                       label="Id"
                       name="id"
-                      rules={[{ required: true, message: 'Please input ID!' }]}
+                      hidden
                     >
-                      <InputNumber style={{ width: '100%' }} min={1} />
+                      <InputNumber />
+                    </Form.Item>
+                  </Col>
+
+                  <Col span={24}>
+                    <Form.Item
+                      label="Name"
+                      name="name"
+                      rules={[{ required: true, message: 'Please input name!' }]}
+                    >
+                      <Input placeholder="John Doe" />
                     </Form.Item>
                   </Col>
 
@@ -105,15 +103,6 @@ export const UserForm = ({
                     </Form.Item>
                   </Col>
 
-                  <Col span={24}>
-                    <Form.Item
-                      label="Name"
-                      name="name"
-                      rules={[{ required: true, message: 'Please input name!' }]}
-                    >
-                      <Input placeholder="John Doe" />
-                    </Form.Item>
-                  </Col>
 
                   <Col span={12}>
                     <Form.Item
@@ -169,13 +158,13 @@ export const UserForm = ({
                     <Space align="center">
                       <Avatar
                         size={64}
-                        src={avatarUrl}
+                        src={avatar}
                         icon={<UserOutlined />}
                         shape="square"
                       />
                       <div>
-                        <div style={{ fontWeight: 'bold' }}>{nameValue || "(no name)"}</div>
-                        <div style={{ fontSize: '12px', opacity: 0.6 }}>{positionValue || "(no position)"}</div>
+                        <div style={{ fontWeight: 'bold' }}>{name || "(no name)"}</div>
+                        <div style={{ fontSize: '12px', opacity: 0.6 }}>{position || "(no position)"}</div>
                       </div>
                     </Space>
                   </Card>

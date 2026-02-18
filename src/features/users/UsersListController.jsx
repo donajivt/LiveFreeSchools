@@ -8,17 +8,28 @@ export const UsersListController = withReactive(
   ({ data, services, monitors, onClick }) => {
 
     const [user, setUser] = useState(null);
+    const [isFormExpanded, setIsFormExpanded] = useState(false);
 
-    const handleOnEdit = async (user) => {
-      console.log("editando user", user);
-      const dbUser = await services.users.getUserById(user.id)
-      console.log("dbUser", dbUser);
-      setUser(dbUser);
+
+    const handleOnEdit = (user) => {
+      setUser(user);
+      setIsFormExpanded(true);
     }
 
     const handleOnDelete = (id) => {
       services.users.deleteUser(id);
       services.users.getUsers();
+    }
+
+    const handleSubmit = (userValues) => {
+      setIsFormExpanded(false);
+
+      if (userValues.id) {
+        services.users.updateUser(userValues);
+      } else {
+        services.users.addUser(userValues);
+      }
+      setUser(null);
     }
 
     const isLoading = monitors.getUsers || monitors.addUser || monitors.getCountries || monitors.getUserById || monitors.updateUser
@@ -27,9 +38,10 @@ export const UsersListController = withReactive(
       <div>
         <UserForm
           countries={data.countries}
-          onAdd={(user) => services.users.addUser(user)}
-          onEdit={(user) => services.users.updateUser(user)}
+          onSubmit={(user) => { handleSubmit(user) }}
           initialValue={user}
+          isExpanded={isFormExpanded}
+          setIsExpanded={setIsFormExpanded}
         />
         <UsersLoader onClick={services.users.getUsers} isLoading={isLoading}>
           {({ filteredUsers }) => {
@@ -64,6 +76,6 @@ export const UsersListController = withReactive(
         defaultValue: [],
       },
     ],
-    monitors: () => ["getUsers", "addUser", "getCountries", "getUserById", "updateUser", "deleteUser" ],
+    monitors: () => ["getUsers", "addUser", "getCountries", "getUserById", "updateUser", "deleteUser"],
   },
 );

@@ -8,7 +8,6 @@ function RandomInt(min, max) {
 
 function randomError(successes, total) {
   if (Math.random() < successes / total) {
-    console.log("Se genero nuevo error")
     throw new Error("Random failure")
   };
 }
@@ -50,7 +49,7 @@ const usersTable = [
 export const userClient = {
   getUsers: async () => {
     await sleep(RandomInt(1000, 5000));
-    randomError(7,10)
+    randomError(7, 10)
     return usersTable;
   },
   addUser: async (user) => {

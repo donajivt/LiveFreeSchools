@@ -21,8 +21,11 @@ const db = {
         saveCollection(collection);
       },
 
-      getOne: (query) => {
-        return getCollection().find((item) => item.id === query.id) || null;
+      getOne: (data) => {
+        const dbdata = getCollection().find((item) => item.id === data.id) || null;
+        if (dbdata) {
+          JSON.stringify(dbdata) != JSON.stringify(data) && updateOne(data)
+        }
       },
 
       updateOne: (data) => {
@@ -70,7 +73,7 @@ function createAction(client, action, service) {
       })
       .catch((error) => {
 
-        service.onError({ ctiaon, error, params, db });
+        service.onError({ action, error, params, db });
         dispatchActionEvent("error", { details: action })
 
       });
