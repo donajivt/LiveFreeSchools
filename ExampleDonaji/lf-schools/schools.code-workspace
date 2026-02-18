@@ -1,0 +1,11 @@
+{
+  "folders": [
+    { "path": "app", "name": "app" }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.requireConfig": true
+  }
+}
+
