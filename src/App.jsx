@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Card, Tabs } from 'antd';
 import { UsersListView } from "./features/users";
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   const items = [
@@ -35,19 +36,20 @@ const App = () => {
   ];
 
   return (
-    <div style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'start', 
-      minHeight: '100vh', 
+    <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'start',
+      minHeight: '100vh',
       background: '#f0f2f5',
-      paddingTop: '50px' 
+      paddingTop: '50px'
     }}>
+      <Toaster />
       <div style={{ width: '90%', maxWidth: '800px' }}>
         <Card>
-          <Tabs 
-            defaultActiveKey="1" 
-            items={items} 
+          <Tabs
+            defaultActiveKey="1"
+            items={items}
             centered
           />
         </Card>

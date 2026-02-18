@@ -5,10 +5,6 @@ import { useState } from "react";
 export const useQuery = ({ collection, where, orderBy }) => {
   const [table] = useLocalStorage(collection);
 
-  console.log("table", table);
-
-
-
   const result = useMemo(() => {
 
     if (!table) return [];
