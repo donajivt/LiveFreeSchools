@@ -16,11 +16,6 @@ export const UsersListController = withReactive(
       setIsFormExpanded(true);
     }
 
-    const handleOnDelete = (id) => {
-      services.users.deleteUser(id);
-      services.users.getUsers();
-    }
-
     const handleSubmit = (userValues) => {
       setIsFormExpanded(false);
 
@@ -50,7 +45,7 @@ export const UsersListController = withReactive(
                 users={filteredUsers}
                 countries={data.countries}
                 onClick={onClick}
-                onDelete={(id) => handleOnDelete(id)}
+                onDelete={(id) => services.users.deleteUser(id)}
                 onEdit={(user) => handleOnEdit(user)}
               />
             );

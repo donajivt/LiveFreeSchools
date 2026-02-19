@@ -40,9 +40,9 @@ const db = {
         }
       },
 
-      deleteOne: (query) => {
+      deleteOne: (data) => {
         const newCollection = getCollection().filter(
-          (item) => item.id !== query.id
+          (item) => item.id !== data
         );
         saveCollection(newCollection);
       },

@@ -22,15 +22,32 @@ export const userReactor = {
         notifyService.success("Usuario Actualizado")
         break;
       case "deleteUser":
-        db.collection("users").deleteOne(params.id);
+        db.collection("users").deleteOne(...params);
         notifyService.success("Usuario El iminado")
 
         break;
     }
   },
-  onError: ({ action, error, params, db }) => {
-    notifyService.error("Ocurrio un error en la peticion")
+  onError: async ({ action, error, params, db }) => {
+    if (error?.status === 401) {
+      notifyService.error("token expirado");
+
+      try {
+        await refreshToken();
+        notifyService.success("reintentando");
+        return userService[action](...params);
+      } catch (refreshError) {
+        notifyService.error("error en el refresh");
+      }
+    } else {
+      notifyService.error("Ocurrio un error en la peticion")
+    }
   },
 };
+
+async function refreshToken() {
+  console.log("Refreshing...");
+  return new Promise((resolve) => setTimeout(resolve, 2000));
+}
 
 export const userService = createService(userClient, userReactor);

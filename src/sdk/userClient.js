@@ -8,7 +8,9 @@ function RandomInt(min, max) {
 
 function randomError(successes, total) {
   if (Math.random() < successes / total) {
-    throw new Error("Random failure")
+    const error = new Error("Unauthorized");
+    error.status = 401;
+    throw error;
   };
 }
 
@@ -46,32 +48,51 @@ const usersTable = [
   },
 ];
 
+const BASE_URL = "https://localhost:7024";
+
+
 export const userClient = {
   getUsers: async () => {
-    await sleep(RandomInt(1000, 5000));
-    randomError(7, 10)
-    return usersTable;
+    const response = await fetch(`${BASE_URL}/useritems`);
+    if (!response.ok) throw new Error("Error al obtener usuarios");
+
+    return await response.json();
   },
+
   addUser: async (user) => {
-    await sleep(RandomInt(500, 2000));
-    const newUser = { ...user, id: usersTable.length + 1 };
-    usersTable.push(newUser);
-    return newUser;
+    const response = await fetch(`${BASE_URL}/useritems`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(user),
+    });
+
+    return await response.json();
   },
+
   getUserById: async (id) => {
-    await sleep(RandomInt(500, 2000));
-    const user = usersTable.find((item) => item.id === id);
-    return user;
+    const response = await fetch(`${BASE_URL}/useritems/${id}`);
+    if (!response.ok) return undefined;
+
+    return await response.json();
   },
+
   updateUser: async (user) => {
-    await sleep(RandomInt(500, 2000));
-    const index = usersTable.findIndex((item) => item.id === user.id);
-    usersTable[index] = user;
+
+    const response = await fetch(`${BASE_URL}/useritems/${user.id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(user),
+    });
+
+    if (!response.ok) throw new Error("Error al actualizar");
     return user;
   },
+
   deleteUser: async (id) => {
-    await sleep(RandomInt(500, 2000));
-    const index = usersTable.findIndex((item) => item.id === id);
-    usersTable.splice(index, 1);
+    const response = await fetch(`${BASE_URL}/useritems/${id}`, {
+      method: 'DELETE',
+    });
+
+    if (!response.ok) throw new Error("Error al eliminar");
   },
 };
