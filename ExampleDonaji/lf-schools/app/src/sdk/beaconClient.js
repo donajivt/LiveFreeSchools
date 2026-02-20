@@ -8,7 +8,7 @@ const beaconsData = [
     districtId: '1',
     schoolId: '',
     facultyId: '6',
-    isAvailable: 1,
+    isAvailable: true,
     locations: [
         {
             beaconId: '1',
@@ -80,7 +80,7 @@ const beaconsData = [
     districtId: '3',
     schoolId: '7',
     facultyId: '19',
-    isAvailable: 1,
+    isAvailable: true,
     locations: [
         {
             beaconId: '2',
@@ -152,7 +152,7 @@ const beaconsData = [
     districtId: '7',
     schoolId: '15',
     facultyId: '',
-    isAvailable: 0,
+    isAvailable: false,
     locations: [
         {
             beaconId: '3',
@@ -224,7 +224,7 @@ const beaconsData = [
     districtId: '91',
     schoolId: '104',
     facultyId: '46',
-    isAvailable: 0,
+    isAvailable: false,
     locations: [
         {
             beaconId: '4',

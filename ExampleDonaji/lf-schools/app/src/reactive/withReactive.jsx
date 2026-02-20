@@ -20,7 +20,6 @@ export const withReactive = (Component, options) => {
 
     useEffect(() => {
       const _monitors = options.monitors();
-
       const handleOnStart = (event) => {
         setMonitors((prev) => ({ ...prev, [event.detail.action]: true }));
       };

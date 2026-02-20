@@ -7,7 +7,9 @@ export const BeaconsListView = () => {
     <div>
         <div style={{ 
           display: 'flex',  
-          marginBottom: '20px', 
+          margin: '20px', 
+          paddingLeft: '5%',
+          paddingBottom: '1%',
           backgroundColor:'white',
         }}>
             <Typography.Title level={2}>Beacons List</Typography.Title>

@@ -8,7 +8,6 @@ const onChange = (pagination, filters, sorter, extra) => {
   console.log('params', pagination, filters, sorter, extra);
 };
 export const BeaconsList = ({ onClick, data, isLoading }) => {
-  console.log("BeaconList.Data", data);
   return(<> 
     <DividerComponent 
       titlePlacement="start">

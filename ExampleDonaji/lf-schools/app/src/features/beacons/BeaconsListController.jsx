@@ -5,8 +5,8 @@ import { withReactive } from "@/reactive/withReactive";
 export const BeaconsListController = withReactive((
     { data, services, monitors }
 ) => {
-    console.log("BeaconsListController.Data", data);
     const isLoading = monitors.getBeacons;
+    console.log("BeaconCreateController.Services", services);
     return (<div>
         <BeaconsList 
             onClick={services.beacons.getBeacons} 
