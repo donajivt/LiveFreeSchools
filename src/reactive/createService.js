@@ -10,6 +10,19 @@ const db = {
       window.dispatchEvent(new Event("storage"));
     };
 
+    const update = (data) => {
+      console.log("lo actualizo")
+      const collection = getCollection();
+      const index = collection.findIndex(
+        (item) => item.id === data.id
+      );
+
+      if (index !== -1) {
+        collection[index] = { ...collection[index], ...data };
+        saveCollection(collection);
+      }
+    }
+
     return {
       bulkWrite: (data) => {
         saveCollection(data);
@@ -24,20 +37,12 @@ const db = {
       getOne: (data) => {
         const dbdata = getCollection().find((item) => item.id === data.id) || null;
         if (dbdata) {
-          JSON.stringify(dbdata) != JSON.stringify(data) && updateOne(data)
+          JSON.stringify(dbdata) != JSON.stringify(data) && update(data)
         }
       },
 
       updateOne: (data) => {
-        const collection = getCollection();
-        const index = collection.findIndex(
-          (item) => item.id === data.id
-        );
-
-        if (index !== -1) {
-          collection[index] = { ...collection[index], ...data };
-          saveCollection(collection);
-        }
+        update(data)
       },
 
       deleteOne: (data) => {

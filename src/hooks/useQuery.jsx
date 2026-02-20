@@ -1,4 +1,5 @@
-import { useMemo, useEffect, useRef } from "react";
+import { useMemo, useEffect } from "react";
+import {useDeepCompareEffect} from "use-deep-compare";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import { useState } from "react";
 
@@ -62,15 +63,16 @@ const order = (data, orderBy) => {
   return direction === 'desc' ? sorted.reverse() : sorted;
 };
 
+
 export const Query = ({ collection, name, orderBy, defaultValue, where, setData }) => {
-  const [value, setValue] = useState(defaultValue || []);
   const result = useQuery({ collection, where, orderBy });
 
-  useEffect(() => {
-    setValue(result);
-    setData((prev) => ({ ...prev, [name]: result || defaultValue }));
-  }, [value.length]);
+  useDeepCompareEffect(() => {
+    setData((prev) => ({ 
+      ...prev, 
+      [name]: result.length > 0 ? result : (defaultValue || []) 
+    }));
+  }, [result]);
 
-  return <></>;
+  return null;
 };
-

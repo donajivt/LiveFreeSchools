@@ -10,7 +10,7 @@ export const withReactive = (Component, options) => {
     const [monitors, setMonitors] = useState([]);
 
     useEffect(() => {
-      options.init({ services, ...props });
+      options.init && options.init({ services, ...props });
     }, []);
 
     return (
