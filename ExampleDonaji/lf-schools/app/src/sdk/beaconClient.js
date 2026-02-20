@@ -314,8 +314,6 @@ export const beaconClient ={
     },
     updateBeacon: async (updatedBeacon, { id }) => {
         await sleep(1000);
-        console.log("query id type:", typeof id);
-        console.log("updateBeacon id:", id);
         const index = beaconsData.findIndex((beacon) => beacon.id === id.toString());
         if (index !== -1) {
             beaconsData[index] = { ...beaconsData[index], ...updatedBeacon };

@@ -15,13 +15,9 @@ const db = {
       update: (query, update) => {
         const collection =
           JSON.parse(localStorage.getItem(collectionName)) || [];
-          console.log("ANTES:", collection);
 
         const updatedCollection = collection.map((item) => {
-          console.log("query id type Serviceeee:", typeof query.id);
-          console.log("item id type Serviceeee:", typeof item.id);
           if (item.id === query.id) {
-            console.log("ACTUALIZANDO:", item);
             return { ...item, ...update };
           }
           return item;
@@ -32,7 +28,6 @@ const db = {
       deleteOne: (query) => {
         const collection =
           JSON.parse(localStorage.getItem(collectionName)) || [];
-          console.log("query id type Serviceeee:", typeof query.id);
         const updatedCollection = collection.filter(
           (item) => item.id !== query.id,
         );
