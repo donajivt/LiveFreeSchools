@@ -13,6 +13,8 @@ export const withReactive = (Component, options) => {
   const Wrapper = ({ ...props }) => {
     const [data, setData] = useState({});
     const [monitors, setMonitors] = useState(buildMonitors(options.monitors()));
+    const [refreshKey, setRefreshKey] = useState(0);
+
 
     useEffect(() => {
       options.init({ services, ...props });
@@ -22,12 +24,16 @@ export const withReactive = (Component, options) => {
       const _monitors = options.monitors();
       const handleOnStart = (event) => {
         setMonitors((prev) => ({ ...prev, [event.detail.action]: true }));
+        console.log("START", refreshKey);
       };
       const handleOnSuccess = (event) => {
         setMonitors((prev) => ({ ...prev, [event.detail.action]: false }));
+        console.log("TRUEEEE", refreshKey);
+        setRefreshKey((prev) => prev + 1);
       };
       const handleOnError = (event) => {
         setMonitors((prev) => ({ ...prev, [event.detail.action]: false }));
+        console.log("FALSE", refreshKey);
       };
 
       _monitors.forEach((monitor) => {
@@ -53,7 +59,7 @@ export const withReactive = (Component, options) => {
       <>
         {options.queries({ ...props }).map((query) => (
           <Query
-            key={query.name}
+            key={`${query.name}-${refreshKey}`}
             collection={query.collection}
             name={query.name}
             defaultValue={query.defaultValue}

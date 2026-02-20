@@ -1,8 +1,11 @@
-import { Typography } from 'antd';
+import { Typography, Button } from 'antd';
+import { useNavigate } from "react-router-dom";
 
+import { RoutePaths } from "@/features/routing/RoutePaths";
 import { BeaconsListController } from './BeaconsListController';
 
 export const BeaconsListView = () => {
+  const navigate = useNavigate();
   return (
     <div>
         <div style={{ 
@@ -14,6 +17,12 @@ export const BeaconsListView = () => {
         }}>
             <Typography.Title level={2}>Beacons List</Typography.Title>
         </div>
+        <Button
+          type="primary"
+          onClick={() => navigate(RoutePaths.beacons.create())}
+        >
+          Create Beacon
+        </Button>
         <BeaconsListController />
     </div>
   );

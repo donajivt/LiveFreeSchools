@@ -312,18 +312,20 @@ export const beaconClient ={
         beaconsData.push(newBeacon);
         return newBeacon;
     },
-    updateBeacon: async (id, updatedBeacon) => {
+    updateBeacon: async (updatedBeacon, { id }) => {
         await sleep(1000);
-        const index = beaconsData.findIndex((beacon) => beacon.id === id);
+        console.log("query id type:", typeof id);
+        console.log("updateBeacon id:", id);
+        const index = beaconsData.findIndex((beacon) => beacon.id === id.toString());
         if (index !== -1) {
             beaconsData[index] = { ...beaconsData[index], ...updatedBeacon };
             return beaconsData[index];
         }
         throw new Error('Beacon not found');
     },
-    deleteBeacon: async (id) => {
+    deleteBeacon: async ({ id }) => {
         await sleep(1000);
-        const index = beaconsData.findIndex((beacon) => beacon.id === id);
+        const index = beaconsData.findIndex((beacon) => beacon.id === id.toString());
         if (index !== -1) {
             const deletedBeacon = beaconsData.splice(index, 1)[0];
             return deletedBeacon;

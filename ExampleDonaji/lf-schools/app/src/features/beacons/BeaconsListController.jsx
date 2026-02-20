@@ -6,10 +6,12 @@ export const BeaconsListController = withReactive((
     { data, services, monitors }
 ) => {
     const isLoading = monitors.getBeacons;
-    console.log("BeaconCreateController.Services", services);
     return (<div>
         <BeaconsList 
-            onClick={services.beacons.getBeacons} 
+            onClick={services.beacons.getBeacons}
+            onDelete={(id) => {
+                services.beacons.deleteBeacon({ id });
+            }}
             data={data.beacons} 
             isLoading={isLoading} 
         />

@@ -14,6 +14,7 @@ export const beaconReactor = {
         db.collection("beacons").update({ id: params.id }, payload);
         break;
       case "deleteBeacon":
+        console.log("deleteBeacon id:", params.id);
         db.collection("beacons").deleteOne({ id: params.id });
         break;
     }
