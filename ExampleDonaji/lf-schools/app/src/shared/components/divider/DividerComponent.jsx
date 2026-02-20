@@ -1,8 +1,8 @@
 import { Divider } from 'antd';
 
-export const DividerComponent = ({ orientation, children }) => {
+export const DividerComponent = ({ titlePlacement, children }) => {
   return (
-    <Divider orientation={orientation}>
+    <Divider titlePlacement={titlePlacement}>
       {children}
     </Divider>
   );
