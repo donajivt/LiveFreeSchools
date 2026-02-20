@@ -1,7 +1,6 @@
-import { useMemo, useEffect } from "react";
+import { useMemo } from "react";
 import {useDeepCompareEffect} from "use-deep-compare";
 import { useLocalStorage } from "@uidotdev/usehooks";
-import { useState } from "react";
 
 export const useQuery = ({ collection, where, orderBy }) => {
   const [table] = useLocalStorage(collection);

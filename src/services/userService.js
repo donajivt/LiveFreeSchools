@@ -30,27 +30,22 @@ export const userReactor = {
     }
   },
   onError: async ({ action, error, params, db }) => {
-    if (error?.status === 401) {
-      notifyService.error("token expirado");
-
-      try {
-        const refreshToken = localStorage.getItem("refreshToken");
-        if (!refreshToken) throw new Error("No refresh token");
-
-        await authService.refresh(refreshToken);
-
-        notifyService.success("reintentando con token renovado...");
-        return userService[action](...params);
-        
-      } catch (refreshError) {
-
-        notifyService.error("simular login...");
-
-        await authService.login({ email: "admin@example.com", password: "admin123" });
-        return userService[action](...params);
-      }
-    } else {
-      notifyService.error("Ocurrió un error en la petición");
+    switch (action) {
+      case "getUsers":
+        notifyService.error("Error al cargar los usuarios");
+        break;
+      case "addUser":
+        notifyService.error("Error al agregar el usuario");
+        break;
+      case "getUserById":
+        notifyService.error("Error al cargar el usuario");
+        break;
+      case "updateUser":
+        notifyService.error("Error al actualizar el usuario");
+        break;
+      case "deleteUser":
+        notifyService.error("Error al eliminar el usuario");
+        break;
     }
   },
 };

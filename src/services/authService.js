@@ -16,10 +16,13 @@ export const authReactor = {
         }
     },
     onError: ({ action, error }) => {
-        if (action === "login") {
-            notifyService.error("Credenciales incorrectas");
-        } else if (action === "refresh") {
-            notifyService.error("Sesión expirada");
+        switch (action) {
+            case "login":
+                notifyService.error("Credenciales incorrectas");
+                break;
+            case "refresh":
+                notifyService.error("Sesión expirada");
+                break;
         }
     },
 };
