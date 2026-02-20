@@ -9,8 +9,7 @@ export const BeaconCreateController = withReactive((
     { services }
 ) => {
     const navigate = useNavigate();
-        return (<div> 
-            <DividerComponent title="Beacon Data" />    
+        return (<div>    
             <BeaconForm 
                 onSubmit={async (beacon) => {
                     await services.beacons.addBeacon(beacon);

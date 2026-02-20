@@ -11,7 +11,7 @@ import { LoadingButton } from '@/shared/components/buttons';
 const onChange = (pagination, filters, sorter, extra) => {
   console.log('params', pagination, filters, sorter, extra);
 };
-export const BeaconsList = ({ onClick, onDelete, data, isLoading }) => {
+export const BeaconsList = ({  onClick, onDelete, data, isLoading }) => {
   const navigate = useNavigate();
   const columns = [
   {
@@ -89,7 +89,7 @@ export const BeaconsList = ({ onClick, onDelete, data, isLoading }) => {
         <ActionComponent
           type="info"
           icon={<EyeOutlined />}
-          onClick={() => console.log("View info", record)}
+          onClick={() => navigate(RoutePaths.beacons.detail(record.id))}
         />
       </Space>
     ),

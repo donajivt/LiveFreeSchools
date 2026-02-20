@@ -6,3 +6,6 @@ export { BeaconCreateView } from "./BeaconCreateView";
 export { BeaconCreateController } from "./BeaconCreateController";
 export { BeaconUpdateView } from "./BeaconUpdateView";
 export { BeaconUpdateController } from "./BeaconUpdateController";
+export { BeaconInfoView } from "./BeaconInfoView";
+export { BeaconInfoController } from "./BeaconInfoController";
+export { BeaconInfoList } from "./BeaconInfoList";

@@ -1,7 +1,6 @@
 import { BeaconsList } from "./BeaconsList";
 import { withReactive } from "@/reactive/withReactive";
 
-
 export const BeaconsListController = withReactive((
     { data, services, monitors }
 ) => {

@@ -12,6 +12,7 @@ export const RoutePaths = {
     beacons: {
         list: () => paths.beacons,
         create: () => `${paths.beacons}/create`,
-        update: id => `${paths.beacons}/${id}/update`
+        update: id => `${paths.beacons}/${id}/update`,
+        detail: id => `${paths.beacons}/${id}`
     }
 }

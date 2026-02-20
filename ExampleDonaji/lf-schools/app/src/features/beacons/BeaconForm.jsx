@@ -30,7 +30,7 @@ export const BeaconForm = ({ beacon, onSubmit, onCancel }) => {
         padding: "24px",
         borderRadius: "8px" }}
     >
-        <DividerComponent titlePlacement="start">Beacon</DividerComponent>
+        <DividerComponent titlePlacement="start">Beacon Data</DividerComponent>
         <Card>
             <Form
                 form={form}

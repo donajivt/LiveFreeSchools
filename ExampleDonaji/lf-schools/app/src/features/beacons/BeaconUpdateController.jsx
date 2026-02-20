@@ -16,8 +16,7 @@ export const BeaconUpdateController = withReactive((
     );
     console.log("query id beacon type:", typeof beacon?.id);
 
-  return (<div> 
-            <DividerComponent title="Beacon Data" />    
+  return (<div>    
             <BeaconForm 
                 onSubmit={async (values) => {
                     await services.beacons.updateBeacon(values, { id });
