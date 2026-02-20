@@ -1,7 +1,7 @@
 import { UserForm } from "./UserForm";
 import { withReactive } from "@/reactive";
 
-const UserEditController = withReactive(
+export const UserEditController = withReactive(
   ({ data, services, isExpanded, setIsExpanded }) => {
 
     const handleSubmit = (values) => {
@@ -46,4 +46,3 @@ const UserEditController = withReactive(
   }
 );
 
-export default UserEditController;

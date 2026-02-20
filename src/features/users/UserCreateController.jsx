@@ -1,7 +1,7 @@
 import { UserForm } from "./UserForm";
 import { withReactive } from "@/reactive";
 
-const UserCreateController = withReactive(
+export const UserCreateController = withReactive(
   ({ data, services, isExpanded, setIsExpanded }) => {
     const handleSubmit = (values) => {
       services.users.addUser(values);
@@ -29,4 +29,3 @@ const UserCreateController = withReactive(
   }
 );
 
-export default UserCreateController;
