@@ -1,43 +1,14 @@
-import { useState } from "react";
 import { withReactive } from "@/reactive";
 import { UserList } from "./UserList";
-import { UserForm } from "./UserForm";
 import { UsersLoader } from "./UsersLoader";
 
 export const UsersListController = withReactive(
   ({ data, services, monitors, onClick }) => {
 
-    const [user, setUser] = useState(null);
-    const [isFormExpanded, setIsFormExpanded] = useState(false);
-
-
-    const handleOnEdit = (user) => {
-      setUser(user);
-      setIsFormExpanded(true);
-    }
-
-    const handleSubmit = (userValues) => {
-      setIsFormExpanded(false);
-
-      if (userValues.id) {
-        services.users.updateUser(userValues);
-      } else {
-        services.users.addUser(userValues);
-      }
-      setUser(null);
-    }
-
-    const isLoading = monitors.getUsers || monitors.addUser || monitors.getCountries || monitors.getUserById || monitors.updateUser
+    const isLoading = monitors.getUsers || monitors.getCountries || monitors.deleteUser
 
     return (
       <div>
-        <UserForm
-          countries={data.countries}
-          onSubmit={(user) => { handleSubmit(user) }}
-          initialValue={user}
-          isExpanded={isFormExpanded}
-          setIsExpanded={setIsFormExpanded}
-        />
         <UsersLoader onClick={services.users.getUsers} isLoading={isLoading}>
           {({ filteredUsers }) => {
             return (
@@ -46,7 +17,7 @@ export const UsersListController = withReactive(
                 countries={data.countries}
                 onClick={onClick}
                 onDelete={(id) => services.users.deleteUser(id)}
-                onEdit={(user) => handleOnEdit(user)}
+                onEdit={(user) => onClick(user)}
               />
             );
           }}
@@ -71,6 +42,6 @@ export const UsersListController = withReactive(
         defaultValue: [],
       },
     ],
-    monitors: () => ["getUsers", "addUser", "getCountries", "getUserById", "updateUser", "deleteUser"],
+    monitors: () => ["getUsers", "getCountries", "deleteUser"],
   },
 );

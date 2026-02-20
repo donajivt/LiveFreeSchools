@@ -11,7 +11,6 @@ const db = {
     };
 
     const update = (data) => {
-      console.log("lo actualizo")
       const collection = getCollection();
       const index = collection.findIndex(
         (item) => item.id === data.id

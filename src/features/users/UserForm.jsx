@@ -62,6 +62,7 @@ export const UserForm = ({
       {isExpanded && (
         <Card title="User" style={{ width: '100%', marginBottom: 24 }}>
           <Form
+            key={initialValue?.id || "new-user"}
             form={form}
             layout="vertical"
             onFinish={onSubmit}
