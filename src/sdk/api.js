@@ -41,7 +41,7 @@ api.interceptors.response.use(
                 });
 
                 const newAccessToken = response.data.accessToken;
-                
+
                 localStorage.setItem("accessToken", newAccessToken);
 
                 api.defaults.headers.Authorization = `Bearer ${newAccessToken}`;
@@ -55,8 +55,7 @@ api.interceptors.response.use(
 
                 localStorage.removeItem("accessToken");
                 localStorage.removeItem("refreshToken");
-                console.log("redirigiendo")
-                window.location.href = "/login";
+                window.location.href = "/";
 
                 return Promise.reject(refreshError);
             }

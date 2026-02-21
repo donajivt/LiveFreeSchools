@@ -1,7 +1,6 @@
 import { userClient } from "@/sdk/userClient";
 import { createService } from "@/reactive";
 import { notifyService } from "./notifyService";
-import { authService } from "./authService";
 
 export const userReactor = {
   onSuccess: ({ action, payload, params, db }) => {
