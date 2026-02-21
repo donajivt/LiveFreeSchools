@@ -1,9 +1,9 @@
 import './App.css';
 import { Card } from 'antd';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { UserRouter } from "./routes/UserRoutes";
+import { UserRouter } from "@/routes";
 import { Toaster } from 'react-hot-toast';
-import { MainLayout } from './components/Layout';
+import { MainLayout } from '@/components';
 
 
 const App = () => {
