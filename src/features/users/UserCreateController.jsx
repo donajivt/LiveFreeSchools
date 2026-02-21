@@ -2,7 +2,7 @@ import { UserForm } from "./UserForm";
 import { withReactive } from "@/reactive";
 
 export const UserCreateController = withReactive(
-  ({ data, services, isExpanded, setIsExpanded }) => {
+  ({ data, services, setIsExpanded }) => {
     const handleSubmit = (values) => {
       services.users.addUser(values);
       setIsExpanded(false);
@@ -13,8 +13,6 @@ export const UserCreateController = withReactive(
         countries={data.countries}
         onSubmit={handleSubmit}
         initialValue={{}}
-        isExpanded={isExpanded}
-        setIsExpanded={setIsExpanded}
       />
     );
   },

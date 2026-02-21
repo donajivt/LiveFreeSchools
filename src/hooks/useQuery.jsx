@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import {useDeepCompareEffect} from "use-deep-compare";
+import { useDeepCompareEffect } from "use-deep-compare";
 import { useLocalStorage } from "@uidotdev/usehooks";
 
 export const useQuery = ({ collection, where, orderBy }) => {
@@ -16,14 +16,13 @@ export const useQuery = ({ collection, where, orderBy }) => {
     return table.filter(condition);
 
   }, [table, where]);
-
   return order(result, orderBy);
 };
 
 const whereConditions = (op, field, value) => {
   switch (op) {
     case "==":
-      return (item) => item[field] === value;
+      return (item) => item[field] == value;
     case "contains":
       return (item) => item[field].toLowerCase().includes(value.toLowerCase());
     case "startsWith":
@@ -67,9 +66,9 @@ export const Query = ({ collection, name, orderBy, defaultValue, where, setData 
   const result = useQuery({ collection, where, orderBy });
 
   useDeepCompareEffect(() => {
-    setData((prev) => ({ 
-      ...prev, 
-      [name]: result.length > 0 ? result : (defaultValue || []) 
+    setData((prev) => ({
+      ...prev,
+      [name]: result.length > 0 ? result : (defaultValue || [])
     }));
   }, [result]);
 

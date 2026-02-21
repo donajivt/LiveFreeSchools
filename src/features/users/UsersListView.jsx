@@ -1,54 +1,25 @@
-import { Breadcrumb, Button } from "antd";
-import { useState } from "react"
-import { UsersListController } from "./UsersListController"
-import { UserCreateController } from "./UserCreateController"
-import { UserEditController } from "./UserEditController"
+import { Button } from "antd";
+import { useNavigate } from "react-router-dom";
+import { UsersListController } from "./UsersListController";
 
 export const UsersListView = () => {
-
-  const [selectedUserId, setSelectedUserId] = useState(null);
-  const [isFormExpanded, setIsFormExpanded] = useState(false);
+  const navigate = useNavigate();
 
   const handleEdit = (user) => {
-    setSelectedUserId(user.id);
-    setIsFormExpanded(true);
+    navigate(`/users/form/${user.id}`);
   };
 
   const handleCreate = () => {
-    setSelectedUserId(null);
-    setIsFormExpanded(true);
+    navigate("/users/form");
   };
 
   return (
-    <div>
-      <Breadcrumb
-        items={[
-          { title: <a>Home</a> },
-          { title: 'Users' },
-        ]}
-        style={{ marginBottom: 16 }}
-      />
-      <Button onClick={handleCreate}>Add New User</Button>
+    <div style={{ padding: '24px', borderRadius: '8px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
+        <Button type="primary" onClick={handleCreate}>Add New User</Button>
+      </div>
 
       <UsersListController onClick={handleEdit} />
-
-      {selectedUserId ? (
-        <UserEditController
-          userId={selectedUserId}
-          isExpanded={isFormExpanded}
-          setIsExpanded={setIsFormExpanded}
-        />
-      ) : (
-        <UserCreateController
-          isExpanded={isFormExpanded}
-          setIsExpanded={setIsFormExpanded}
-        />
-      )}
     </div>
   );
 };
-
-
-
-
-
