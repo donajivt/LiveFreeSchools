@@ -1,9 +1,13 @@
 const paths = {
+    auth: '/auth',
     trips: '/trips',
     beacons: '/beacons'
 };
 
 export const RoutePaths = {
+    auth:{
+        login: () => paths.auth,
+    },
     trips:{
         list: () => paths.trips,
         create: () => `${paths.trips}/create`,

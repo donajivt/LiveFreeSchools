@@ -1,8 +1,8 @@
 import { Table, Space } from 'antd';
 import { DeleteOutlined, EditOutlined, EyeOutlined } from '@ant-design/icons';
 import { useNavigate } from "react-router-dom";
-import { RoutePaths } from "@/features/routing/RoutePaths";
 
+import { RoutePaths } from "@/features/routing/RoutePaths";
 import { ActionComponent } from '@/shared/components/buttons';
 import { LoadingButton } from '@/shared/components/buttons';
 

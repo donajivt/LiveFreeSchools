@@ -44,10 +44,11 @@ namespace MicroSerices.Auth.API.Controllers.V1
                 return BadRequest(_response);
             }
             _response.Result = loginResponse;
+            _response.Message = "Welcome";
             return Ok(_response);
         }
 
-        [HttpPost("AssignRole")]
+        [HttpPost("assignRole")]
         public async Task<IActionResult> AssignRole([FromBody] RegistrationRequestDto model)
         {
             var assignRoleSuccess = await _authService.AssignRole(model.Email, model.Role.ToUpper());
