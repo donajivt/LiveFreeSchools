@@ -1,7 +1,7 @@
-import { Table, Row, Col, Tag } from "antd";
+import { Table, Row, Col, Tag, Button } from "antd";
 import { DividerComponent } from "@/shared/components/divider/DividerComponent";
 
-export const BeaconInfoList = ({ beacon }) => {
+export const BeaconInfoList = ({ beacon, onClick }) => {
   if (!beacon) return null;
 
   const eventColumns = [
@@ -105,6 +105,15 @@ export const BeaconInfoList = ({ beacon }) => {
         rowKey={(record, index) => index}
         pagination={{ pageSize: 5 }}
       />
+      <Button
+        color="default"
+        variant="Outlined"
+        size='large'
+        onClick={onClick}
+        style={{ marginTop: 16, padding: "1% 7%" }}
+      >
+        Back
+      </Button>
     </div>
   );
 };

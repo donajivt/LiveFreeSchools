@@ -2,7 +2,6 @@ import { useParams, useNavigate } from "react-router-dom";
 
 import { RoutePaths } from "@/features/routing/RoutePaths";
 import { withReactive } from "@/reactive/withReactive";
-import { DividerComponent } from "@/shared/components/divider/DividerComponent";
 import { BeaconForm } from "./BeaconForm";
 
 export const BeaconUpdateController = withReactive((
@@ -14,7 +13,6 @@ export const BeaconUpdateController = withReactive((
     const beacon = data?.beacons?.find(
     b => b.id === id
     );
-    console.log("query id beacon type:", typeof beacon?.id);
 
   return (<div>    
             <BeaconForm 

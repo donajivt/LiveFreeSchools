@@ -1,13 +1,10 @@
 import { Table, Space } from 'antd';
 import { DeleteOutlined, EditOutlined, EyeOutlined } from '@ant-design/icons';
-import { useNavigate } from "react-router-dom";
 
-import { RoutePaths } from "@/features/routing/RoutePaths";
 import { ActionComponent } from '@/shared/components/buttons';
 import { LoadingButton } from '@/shared/components/buttons';
 
-export const BeaconsList = ({  onClick, onDelete, data, isLoading }) => {
-  const navigate = useNavigate();
+export const BeaconsList = ({  onClick, onEdit, onInfo, onDelete, data, isLoading }) => {
   const columns = [
   {
     title: 'Beacon Name',
@@ -78,13 +75,13 @@ export const BeaconsList = ({  onClick, onDelete, data, isLoading }) => {
         <ActionComponent
           type="edit"
           icon={<EditOutlined />}
-          onClick={() => navigate(RoutePaths.beacons.update(record.id))}
+          onClick={() => onEdit(record.id)}
         />
 
         <ActionComponent
           type="info"
           icon={<EyeOutlined />}
-          onClick={() => navigate(RoutePaths.beacons.detail(record.id))}
+          onClick={() => onInfo(record.id)}
         />
       </Space>
     ),

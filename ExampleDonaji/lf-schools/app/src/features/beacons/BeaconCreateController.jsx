@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 
 import { RoutePaths } from "@/features/routing/RoutePaths";
 import { withReactive } from "@/reactive/withReactive";
-import { DividerComponent } from "@/shared/components/divider/DividerComponent";
 import { BeaconForm } from "./BeaconForm";
 
 export const BeaconCreateController = withReactive((

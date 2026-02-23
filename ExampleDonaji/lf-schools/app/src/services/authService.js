@@ -17,6 +17,7 @@ export const authReactor = {
     },
     onError: ({ action, error }) => {
         console.error("Auth error:", action, error.message);
+        throw error;
     },
 };
 

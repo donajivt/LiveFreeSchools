@@ -16,6 +16,7 @@ export const LoginController = withReactive((
                 userName: credentials.userName,
                 password: credentials.password
             });
+            message.success('Login successful');
             navigate(RoutePaths.beacons.list());
         } catch (error) {
             message.error(error.message);

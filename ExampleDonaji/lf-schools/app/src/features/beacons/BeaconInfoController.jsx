@@ -1,6 +1,5 @@
 import { withReactive } from '@/reactive/withReactive';
 import { useParams } from "react-router-dom";
-import { DividerComponent } from "@/shared/components/divider/DividerComponent";
 import { BeaconInfoList } from "./BeaconInfoList";
 
 export const BeaconInfoController = withReactive((
@@ -12,11 +11,15 @@ export const BeaconInfoController = withReactive((
       (b) => b.id === id
     );
 
+    const handleCancel = () => {
+      window.history.back();
+    };
+
     if (!beacon) return <p>Loading...</p>;
 
      return (
       <div className="beacon-detail-container">
-        <BeaconInfoList beacon={beacon} />
+        <BeaconInfoList beacon={ beacon} onClick={handleCancel } />
       </div>
     );
 
