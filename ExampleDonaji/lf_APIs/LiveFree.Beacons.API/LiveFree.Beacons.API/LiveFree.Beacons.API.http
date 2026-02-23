@@ -1,0 +1,6 @@
+@LiveFree.Beacons.API_HostAddress = http://localhost:5282
+
+GET {{LiveFree.Beacons.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
