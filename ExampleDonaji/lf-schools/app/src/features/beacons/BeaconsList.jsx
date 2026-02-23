@@ -6,11 +6,6 @@ import { RoutePaths } from "@/features/routing/RoutePaths";
 import { ActionComponent } from '@/shared/components/buttons';
 import { LoadingButton } from '@/shared/components/buttons';
 
-
-
-const onChange = (pagination, filters, sorter, extra) => {
-  console.log('params', pagination, filters, sorter, extra);
-};
 export const BeaconsList = ({  onClick, onDelete, data, isLoading }) => {
   const navigate = useNavigate();
   const columns = [
@@ -27,8 +22,8 @@ export const BeaconsList = ({  onClick, onDelete, data, isLoading }) => {
   },
   {
     title: 'Type',
-    dataIndex: 'type',
-    key: 'type',
+    dataIndex: 'beaconType',
+    key: 'beaconType',
     filters: [
       {
         text: 'Broadcast',
@@ -39,11 +34,11 @@ export const BeaconsList = ({  onClick, onDelete, data, isLoading }) => {
         value: '2',
       }
     ],
-    onFilter: (value, record) => record.type === value,
+    onFilter: (value, record) => record.beaconType === value,
     filterSearch: true,
     render: (_, record) => (
       <Space size="middle">
-        <p>{record.type === '1' ? "Broadcast" : "Chaperone"}</p>
+        <p>{record.beaconType === "1" ? "Broadcast" : "Chaperone"}</p>
       </Space>
     ),
   }, 
@@ -102,7 +97,7 @@ export const BeaconsList = ({  onClick, onDelete, data, isLoading }) => {
       columns={columns} 
       dataSource={data} 
       loading={isLoading} 
-      onChange={onChange}
+      pagination={{ pageSize: 5 }}
     />
   </div>
   );

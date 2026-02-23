@@ -1,4 +1,4 @@
-import { Table, Row, Col, Divider, Tag } from "antd";
+import { Table, Row, Col, Tag } from "antd";
 import { DividerComponent } from "@/shared/components/divider/DividerComponent";
 
 export const BeaconInfoList = ({ beacon }) => {
