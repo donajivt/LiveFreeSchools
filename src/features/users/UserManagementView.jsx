@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { UserCreateController } from "./UserCreateController";
 import { UserEditController } from "./UserEditController";
@@ -6,21 +5,14 @@ import { Button } from "antd";
 import { ArrowLeftOutlined } from "@ant-design/icons";
 
 export const UserManagementView = () => {
+    
     const { id } = useParams();
     const navigate = useNavigate();
-    const [isExpanded, setIsExpanded] = useState(true);
 
     const handleBack = () => {
         navigate("/users");
     };
 
-    const handleSetIsExpanded = (expanded) => {
-        if (!expanded) {
-            navigate("/users");
-        } else {
-            setIsExpanded(expanded);
-        }
-    };
 
     return (
         <div style={{ padding: '24px', borderRadius: '8px' }}>
@@ -29,18 +21,16 @@ export const UserManagementView = () => {
                 onClick={handleBack}
                 style={{ marginBottom: 16 }}
             >
-                Regresar a la lista
+                Regresar
             </Button>
             {id ? (
                 <UserEditController
                     userId={id}
-                    isExpanded={isExpanded}
-                    setIsExpanded={handleSetIsExpanded}
+                    onSubmit={handleBack}
                 />
             ) : (
                 <UserCreateController
-                    isExpanded={isExpanded}
-                    setIsExpanded={handleSetIsExpanded}
+                    onSubmit={handleBack}
                 />
             )}
         </div>

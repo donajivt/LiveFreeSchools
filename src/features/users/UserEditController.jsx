@@ -4,11 +4,11 @@ import { withReactive } from "@/reactive";
 
 
 export const UserEditController = withReactive(
-  ({ data, services, monitors, setIsExpanded }) => {
+  ({ data, services, monitors, onSubmit }) => {
 
     const handleSubmit = (values) => {
       services.users.updateUser(values);
-      setIsExpanded(false);
+      onSubmit()
     };
 
     if (monitors.getUserById) return (

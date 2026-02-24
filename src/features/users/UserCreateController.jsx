@@ -2,10 +2,12 @@ import { UserForm } from "./UserForm";
 import { withReactive } from "@/reactive";
 
 export const UserCreateController = withReactive(
-  ({ data, services, setIsExpanded }) => {
+  ({ data, services, onSubmit  }) => {
+
+    
     const handleSubmit = (values) => {
       services.users.addUser(values);
-      setIsExpanded(false);
+      onSubmit()
     };
 
     return (
