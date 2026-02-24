@@ -1,10 +1,11 @@
 import { Button, Row, Col, Form, Input, Space } from 'antd';
 
 
-export const LoginForm = ({ handleLogin }) => {
+export const LoginForm = ({ handleLogin, isLoading }) => {
 
     const [form] = Form.useForm();
 
+    if (isLoading) return <a>loading... </a>
 
     return (
         <Form
@@ -15,6 +16,7 @@ export const LoginForm = ({ handleLogin }) => {
             initialValues={{}}
             style={{ marginTop: 24 }}
         >
+            {isLoading}
             <Row gutter={24}>
                 <Col span={10}>
                     <Form.Item

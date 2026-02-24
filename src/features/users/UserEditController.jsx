@@ -11,7 +11,7 @@ export const UserEditController = withReactive(
       onSubmit()
     };
 
-    if (monitors.getUserById) return (
+    if (monitors.getUserById.isLoading) return (
       <div
         style={{
           width: "100%",

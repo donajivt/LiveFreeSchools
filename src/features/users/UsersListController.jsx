@@ -5,7 +5,7 @@ import { UsersLoader } from "./UsersLoader";
 export const UsersListController = withReactive(
   ({ data, services, monitors, onClick }) => {
 
-    const isLoading = monitors.getUsers || monitors.getCountries || monitors.deleteUser
+    const isLoading = monitors.getUsers.isLoading || monitors.getCountries.isLoading || monitors.deleteUser.isLoading
 
     return (
       <div>

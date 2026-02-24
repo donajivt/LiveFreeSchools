@@ -1,17 +1,18 @@
 import { useState, useEffect } from 'react';
 
 export const useMonitor = (monitor) => {
-    const [isLoading, setIsLoading] = useState(false);
+
+    const [state, setState] = useState([false, {}]);
 
     useEffect(() => {
-        const handleOnStart = () => {
-            setIsLoading(true);
+        const handleOnStart = ({ detail }) => {
+            setState([true, {}]);
         };
-        const handleOnSuccess = () => {
-            setIsLoading(false);
+        const handleOnSuccess = ({ detail }) => {
+            setState([false, detail]);
         };
-        const handleOnError = () => {
-            setIsLoading(false);
+        const handleOnError = ({ detail }) => {
+            setState([false, {}]);
         };
 
         window.addEventListener(`lf:${monitor}:start`, handleOnStart);
@@ -24,19 +25,18 @@ export const useMonitor = (monitor) => {
             window.removeEventListener(`lf:${monitor}:error`, handleOnError);
         };
     }, [monitor]);
-
-    return isLoading;
+    return state;
 };
 
 export const Monitor = ({ monitor, setMonitors }) => {
-    const isLoading = useMonitor(monitor);
+    const state = useMonitor(monitor);
 
     useEffect(() => {
         setMonitors((prev) => ({
             ...prev,
-            [monitor]: isLoading,
+            [monitor]: state,
         }));
-    }, [isLoading, monitor, setMonitors]);
+    }, [state, monitor, setMonitors]);
 
     return null;
 };

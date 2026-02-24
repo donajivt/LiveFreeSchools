@@ -57,28 +57,27 @@ const db = {
 
 function createAction(client, action, service) {
 
-  const dispatchActionEvent = (status, ...details) => {
+  const dispatchActionEvent = (status, details) => {
     window.dispatchEvent(
-      new CustomEvent(`lf:${action}:${status}`, { ...details }),
+      new CustomEvent(`lf:${action}:${status}`, { detail: { action, ...details } }),
     );
   }
 
   return (...params) => {
 
-    dispatchActionEvent("start", { details: action })
+    dispatchActionEvent("start")
 
     return client[action](...params)
       .then((result) => {
 
         service.onSuccess({ action, payload: result, params, db });
-        dispatchActionEvent("success", { details: action })
-        return result;
+        dispatchActionEvent("success", result)
 
       })
       .catch((error) => {
 
         service.onError({ action, error, params, db });
-        dispatchActionEvent("error", { details: action })
+        dispatchActionEvent("error")
 
       });
   };
