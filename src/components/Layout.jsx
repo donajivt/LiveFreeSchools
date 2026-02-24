@@ -1,18 +1,12 @@
-import { Layout, Menu, Button } from 'antd';
 import { Link, useLocation } from 'react-router-dom';
 import { UserOutlined, HomeOutlined } from '@ant-design/icons';
-import services from "@/services";
+import { useContext } from 'react';
+import { UserContext } from '../App';
+import { LoginView } from '@/features/auth/login';
+import { Layout, Menu, Button } from 'antd';
+
 
 const { Header, Content } = Layout;
-
-
-const simulateAuth = async () => {
-    await services.auth.login({
-        email: "admin@example.com",
-        password: "admin123",
-    });
-}
-
 
 const NavigationMenu = () => {
     const location = useLocation();
@@ -43,6 +37,9 @@ const NavigationMenu = () => {
 };
 
 export const MainLayout = ({ children }) => {
+
+    const { user, SetUser } = useContext(UserContext);
+
     return (
         <Layout style={{ minHeight: '100vh' }}>
             <Header style={{ display: 'flex', alignItems: 'center' }}>
@@ -50,9 +47,7 @@ export const MainLayout = ({ children }) => {
                     LiveFree
                 </div>
                 <NavigationMenu />
-                <Button type="primary" onClick={simulateAuth}>
-                    Simular Autenticación
-                </Button>
+                {user ? (<Button onClick={() => SetUser(null)}>Logged as {user}</Button>) : (<LoginView />)}
             </Header>
             <Content style={{ padding: '24px' }}>
                 {children}
@@ -60,3 +55,7 @@ export const MainLayout = ({ children }) => {
         </Layout>
     );
 }
+
+
+
+
