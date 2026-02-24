@@ -4,14 +4,83 @@
     "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Infrastructure\\LiveFree.Beacons.API.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Infrastructure\\LiveFree.Beacons.API.Infrastructure.csproj": {
+    "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Application\\LiveFree.Beacons.API.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Infrastructure\\LiveFree.Beacons.API.Infrastructure.csproj",
-        "projectName": "LiveFree.Beacons.API.Infrastructure",
-        "projectPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Infrastructure\\LiveFree.Beacons.API.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Application\\LiveFree.Beacons.API.Application.csproj",
+        "projectName": "LiveFree.Beacons.API.Application",
+        "projectPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Application\\LiveFree.Beacons.API.Application.csproj",
         "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vania\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Domain\\LiveFree.Beacons.API.Domain.csproj": {
+                "projectPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Domain\\LiveFree.Beacons.API.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Domain\\LiveFree.Beacons.API.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Domain\\LiveFree.Beacons.API.Domain.csproj",
+        "projectName": "LiveFree.Beacons.API.Domain",
+        "projectPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Domain\\LiveFree.Beacons.API.Domain.csproj",
+        "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +118,120 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Infrastructure\\LiveFree.Beacons.API.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Infrastructure\\LiveFree.Beacons.API.Infrastructure.csproj",
+        "projectName": "LiveFree.Beacons.API.Infrastructure",
+        "projectPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Infrastructure\\LiveFree.Beacons.API.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vania\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Application\\LiveFree.Beacons.API.Application.csproj": {
+                "projectPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Application\\LiveFree.Beacons.API.Application.csproj"
+              },
+              "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Domain\\LiveFree.Beacons.API.Domain.csproj": {
+                "projectPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Domain\\LiveFree.Beacons.API.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[14.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.13, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
