@@ -16,8 +16,8 @@ export const BeaconUpdateController = withReactive((
 
   return (<div>    
             <BeaconForm 
-                onSubmit={async (values) => {
-                    await services.beacons.updateBeacon(values, { id });
+                onSubmit={(values) => {
+                    services.beacons.updateBeacon(values, { id });
                     navigate(RoutePaths.beacons.list());
                 }}
                 onCancel={() => navigate(RoutePaths.beacons.list())}

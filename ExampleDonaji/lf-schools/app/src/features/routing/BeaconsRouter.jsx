@@ -3,14 +3,15 @@ import { BeaconsListView } from "@/features/beacons";
 import { BeaconCreateView } from "@/features/beacons/BeaconCreateView";
 import { BeaconUpdateView } from "@/features/beacons/BeaconUpdateView";
 import { BeaconInfoView } from "@/features/beacons/BeaconInfoView";
+import { ProtectedRoute } from "./ProtectedRoute";
 
 export function BeaconsRouter() {
   return (
     <Routes>
-      <Route index element={< BeaconsListView />} />
-      <Route path="create" element={<BeaconCreateView />} />
-      <Route path=":id/update" element={<BeaconUpdateView />} />
-      <Route path=":id" element={<BeaconInfoView />} />
+      <Route index element={<ProtectedRoute><BeaconsListView /></ProtectedRoute>} />
+      <Route path="create" element={<ProtectedRoute><BeaconCreateView /></ProtectedRoute>} />
+      <Route path=":id/update" element={<ProtectedRoute><BeaconUpdateView /></ProtectedRoute>} />
+      <Route path=":id" element={<ProtectedRoute><BeaconInfoView /></ProtectedRoute>} />
     </Routes>
   );
 }
