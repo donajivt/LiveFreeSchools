@@ -5,7 +5,9 @@ import services from "@/services";
 
 
 export const withReactive = (Component, options) => {
+
   const Wrapper = ({ ...props }) => {
+    
     const [data, setData] = useState({});
     const [monitors, setMonitors] = useState([]);
 

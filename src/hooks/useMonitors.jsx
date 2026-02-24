@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 
 export const useMonitor = (monitor) => {
     const [isLoading, setIsLoading] = useState(false);
-    const [errorMessage, setErrorMessage] = useState()
 
     useEffect(() => {
         const handleOnStart = () => {
