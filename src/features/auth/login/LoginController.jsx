@@ -13,7 +13,7 @@ export const LoginController = withReactive(
 
         useEffect(() => {
             if (results && Object.keys(results).length > 0) {
-                SetUser(results);
+                SetUser(results.user);
             }
         }, [results, SetUser]);
 

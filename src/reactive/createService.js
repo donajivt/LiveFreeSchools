@@ -58,6 +58,7 @@ const db = {
 function createAction(client, action, service) {
 
   const dispatchActionEvent = (status, details) => {
+    console.log(`Dispatching event: lf:${action}:${status}`, details);
     window.dispatchEvent(
       new CustomEvent(`lf:${action}:${status}`, { detail: { action, ...details } }),
     );

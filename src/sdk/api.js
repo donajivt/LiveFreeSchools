@@ -1,19 +1,22 @@
 import axios from "axios";
+import { authStore } from "../services/authService";
 
 const BASE_URL = "https://localhost:7024";
 
 const api = axios.create({
     baseURL: BASE_URL,
+    withCredentials: true
 });
 
 const refreshApi = axios.create({
     baseURL: BASE_URL,
+    withCredentials: true
 });
 
 
 
 api.interceptors.request.use((config) => {
-    const token = localStorage.getItem("accessToken");
+    const token = authStore.getToken();
 
     if (token) {
         config.headers.Authorization = `Bearer ${token}`;
@@ -54,7 +57,7 @@ api.interceptors.response.use(
 
                 localStorage.removeItem("accessToken");
                 localStorage.removeItem("refreshToken");
-                window.location.href = "/";
+                //window.location.href = "/";
 
                 return Promise.reject(refreshError);
             }

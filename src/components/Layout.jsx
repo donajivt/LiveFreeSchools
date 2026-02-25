@@ -47,7 +47,7 @@ export const MainLayout = ({ children }) => {
                     LiveFree
                 </div>
                 <NavigationMenu />
-                {user ? (<Button onClick={() => SetUser(null)}>Logged</Button>) : (<LoginView />)}
+                {user ? (<Button onClick={() => SetUser(null)}>Logged as {user.name}</Button>) : (<LoginView />)}
             </Header>
             <Content style={{ padding: '24px' }}>
                 {children}

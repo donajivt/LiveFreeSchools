@@ -21,7 +21,7 @@ export const withReactive = (Component, options) => {
     useEffect(() => {
       options.init && options.init({ services, ...props });
     }, []);
-""
+
     return (
       <>
         {

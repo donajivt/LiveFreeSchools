@@ -7,11 +7,12 @@ export const authReactor = {
         switch (action) {
             case "login":
             case "refresh":
-                localStorage.setItem("accessToken", payload.accessToken);
-                localStorage.setItem("refreshToken", payload.refreshToken);
-                if (action === "login") {
-                    notifyService.success("Sesión iniciada");
-                }
+                authStore.setToken(payload.accessToken);
+                notifyService.success("Sesión iniciada");
+                break;
+            case "logout":
+                authStore.setToken("");
+                notifyService.success("Sesión cerrada");
                 break;
         }
     },
@@ -26,5 +27,14 @@ export const authReactor = {
         }
     },
 };
+
+let accessToken = "";
+
+export const authStore = {
+    getToken: () => accessToken,
+    setToken: (token) => {
+        accessToken = token;
+    }
+}
 
 export const authService = createService(authClient, authReactor);
