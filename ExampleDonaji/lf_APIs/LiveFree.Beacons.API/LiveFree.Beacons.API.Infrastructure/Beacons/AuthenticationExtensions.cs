@@ -43,7 +43,7 @@ namespace LiveFree.Beacons.API.Infrastructure.Beacons
         {
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Microservicio Publications", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Microservicio Beacons", Version = "v1" });
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
