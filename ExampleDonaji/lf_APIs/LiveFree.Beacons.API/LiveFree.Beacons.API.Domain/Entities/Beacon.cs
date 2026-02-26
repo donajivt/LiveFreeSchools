@@ -20,8 +20,8 @@
 
         //Navigation properties
 
-        public ICollection<BeaconLocation> Locations { get; set; } = new List<BeaconLocation>();
+        public ICollection<BeaconLocation>? Locations { get; set; }
 
-        public ICollection<BeaconEvent> Events { get; set; } = new List<BeaconEvent>();
+        public ICollection<BeaconEvent>? Events { get; set; }
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LiveFree.Beacons.API.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+daa951e9d7f6c06169039c2baa452f8342a20901")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7368d467ba562d6b918fc58d876da77ab21e68e6")]
 [assembly: System.Reflection.AssemblyProductAttribute("LiveFree.Beacons.API.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LiveFree.Beacons.API.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

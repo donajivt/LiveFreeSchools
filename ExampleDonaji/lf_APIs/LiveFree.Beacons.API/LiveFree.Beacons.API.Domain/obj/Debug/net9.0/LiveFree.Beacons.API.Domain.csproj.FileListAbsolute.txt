@@ -1,0 +1,12 @@
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\LiveFree.Beacons.API\LiveFree.Beacons.API.Domain\bin\Debug\net9.0\LiveFree.Beacons.API.Domain.deps.json
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\LiveFree.Beacons.API\LiveFree.Beacons.API.Domain\bin\Debug\net9.0\LiveFree.Beacons.API.Domain.dll
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\LiveFree.Beacons.API\LiveFree.Beacons.API.Domain\bin\Debug\net9.0\LiveFree.Beacons.API.Domain.pdb
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\LiveFree.Beacons.API\LiveFree.Beacons.API.Domain\obj\Debug\net9.0\LiveFree.Beacons.API.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\LiveFree.Beacons.API\LiveFree.Beacons.API.Domain\obj\Debug\net9.0\LiveFree.Beacons.API.Domain.AssemblyInfoInputs.cache
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\LiveFree.Beacons.API\LiveFree.Beacons.API.Domain\obj\Debug\net9.0\LiveFree.Beacons.API.Domain.AssemblyInfo.cs
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\LiveFree.Beacons.API\LiveFree.Beacons.API.Domain\obj\Debug\net9.0\LiveFree.Beacons.API.Domain.csproj.CoreCompileInputs.cache
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\LiveFree.Beacons.API\LiveFree.Beacons.API.Domain\obj\Debug\net9.0\LiveFree.Beacons.API.Domain.sourcelink.json
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\LiveFree.Beacons.API\LiveFree.Beacons.API.Domain\obj\Debug\net9.0\LiveFree.Beacons.API.Domain.dll
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\LiveFree.Beacons.API\LiveFree.Beacons.API.Domain\obj\Debug\net9.0\refint\LiveFree.Beacons.API.Domain.dll
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\LiveFree.Beacons.API\LiveFree.Beacons.API.Domain\obj\Debug\net9.0\LiveFree.Beacons.API.Domain.pdb
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\LiveFree.Beacons.API\LiveFree.Beacons.API.Domain\obj\Debug\net9.0\ref\LiveFree.Beacons.API.Domain.dll

@@ -18,8 +18,8 @@
 
         public bool IsAvailable { get; set; }
 
-        public List<BeaconLocationDto> Locations { get; set; } = new();
+        public List<BeaconLocationDto>? Locations { get; set; }
 
-        public List<BeaconEventDto> Events { get; set; } = new();
+        public List<BeaconEventDto>? Events { get; set; }
     }
 }

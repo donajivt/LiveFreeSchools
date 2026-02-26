@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 
-namespace LiveFree.Beacons.API.Infrastructure.Notifications
+namespace LiveFree.Beacons.API.Infrastructure.Beacons
 {
     public static class WebApplicationBuilderExtensions
     {

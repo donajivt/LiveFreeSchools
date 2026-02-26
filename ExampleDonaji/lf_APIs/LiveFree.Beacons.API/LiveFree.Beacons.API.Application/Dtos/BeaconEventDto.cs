@@ -2,7 +2,7 @@
 {
     public class BeaconEventDto
     {
-        public Guid BeaconId { get; set; }
+        public int BeaconId { get; set; }
 
         public string EmergencyType { get; set; } = string.Empty;
 

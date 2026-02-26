@@ -1,6 +1,7 @@
 ﻿using LiveFree.Beacons.API.Application.Interfaces;
 using LiveFree.Beacons.API.Domain.Entities;
 using LiveFree.Beacons.API.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace LiveFree.Beacons.API.Infrastructure.Repositories
 {
@@ -13,12 +14,56 @@ namespace LiveFree.Beacons.API.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task SaveAsync(Beacon beacon)
+        public async Task CreateAsync(Beacon beacon)
         {
+            await _context.Beacons.AddAsync(beacon);
+            await _context.SaveChangesAsync();
         }
 
-        public async Task<List<Beacon>> GetByUserAsync(string userId)
+        public async Task DeleteAsync(int id)
         {
+            await _context.Beacons
+                .Where(b => b.Id == id)
+                .ExecuteDeleteAsync();
+        }
+
+        public async Task UpdateAsync(Beacon beacon)
+        {
+            await _context.Beacons
+                .Where(b => b.Id == beacon.Id)
+                .ExecuteUpdateAsync(b => b
+                    .SetProperty(p => p.DeviceName, beacon.DeviceName)
+                    .SetProperty(p => p.BeaconType, beacon.BeaconType)
+                    .SetProperty(p => p.PhoneNumber, beacon.PhoneNumber)
+                    .SetProperty(p => p.DistrictId, beacon.DistrictId)
+                    .SetProperty(p => p.SchoolId, beacon.SchoolId)
+                    .SetProperty(p => p.FacultyId, beacon.FacultyId)
+                    .SetProperty(p => p.IsAvailable, beacon.IsAvailable)
+                );
+        }
+
+        public async Task<Beacon?> GetByIdAsync(int id)
+        {
+            return await _context.Beacons
+                .Include(b => b.Locations)
+                .Include(b => b.Events)
+                .FirstOrDefaultAsync(b => b.Id == id);
+        }
+
+        public async Task<IEnumerable<Beacon>> GetAllAsync()
+        {
+            return await _context.Beacons
+                .Include(b => b.Locations)
+                .Include(b => b.Events)
+                .ToListAsync();
+        }
+
+        public async Task<Beacon?> GetByDeviceNameAsync(string deviceName)
+        {
+            return await _context.Beacons
+               .Include(b => b.Locations)
+               .Include(b => b.Events)
+               .FirstOrDefaultAsync(b => b.DeviceName == deviceName);
         }
     }
 }

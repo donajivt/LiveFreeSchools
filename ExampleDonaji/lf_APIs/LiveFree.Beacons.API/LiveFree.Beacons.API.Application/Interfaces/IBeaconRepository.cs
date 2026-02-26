@@ -4,7 +4,12 @@ namespace LiveFree.Beacons.API.Application.Interfaces
 {
     public interface IBeaconRepository
     {
-        Task SaveAsync(Beacon beacon);
-        Task<List<Beacon>> GetByUserAsync(string userId);
+        Task CreateAsync(Beacon beacon);
+        Task DeleteAsync(int id);
+        Task UpdateAsync(Beacon beacon);
+        Task<Beacon> GetByIdAsync(int id);
+        Task<Beacon?> GetByDeviceNameAsync(string deviceName);
+        Task<IEnumerable<Beacon>> GetAllAsync();
+
     }
 }
