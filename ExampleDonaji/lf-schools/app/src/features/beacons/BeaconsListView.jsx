@@ -10,11 +10,13 @@ export const BeaconsListView = () => {
     <div>
         <Button
           type="primary"
-          onClick={() => navigate(RoutePaths.beacons.create())}
         >
           Add Beacon
         </Button>
-        <BeaconsListController />
+        <BeaconsListController
+          onClick={() => navigate(RoutePaths.beacons.create())}
+          onEdit = { ( id ) => navigate(RoutePaths.beacons.update(id)) }
+          onInfo = { ( id ) => navigate(RoutePaths.beacons.detail(id)) } />
     </div>
   );
 }

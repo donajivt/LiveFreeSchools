@@ -1,13 +1,9 @@
-import { useNavigate } from "react-router-dom";
-
-import { RoutePaths } from "@/features/routing/RoutePaths";
 import { BeaconsList } from "./BeaconsList";
 import { withReactive } from "@/reactive/withReactive";
 
 export const BeaconsListController = withReactive((
-    { data, services, monitors }
+    { data, services, monitors, onEdit, onInfo }
 ) => {
-    const navigate = useNavigate();
     const isLoading = monitors.getBeacons;
     return (<div>
         <BeaconsList 
@@ -15,12 +11,9 @@ export const BeaconsListController = withReactive((
             onDelete={(id) => {
                 services.beacons.deleteBeacon({ id });
             }}
-            onEdit={(id) => {
-                navigate(RoutePaths.beacons.update(id))
-            }}
-            onInfo={(id) => {
-                navigate(RoutePaths.beacons.detail(id))
-            }}
+            onEdit={(id) => onEdit(id)}
+            onInfo={(id) => onInfo(id)}
+
             data={data.beacons} 
             isLoading={isLoading} 
         />

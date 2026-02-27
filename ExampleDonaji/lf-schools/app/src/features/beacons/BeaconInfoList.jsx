@@ -1,4 +1,5 @@
 import { Table, Row, Col, Tag, Button } from "antd";
+
 import { DividerComponent } from "@/shared/components/divider/DividerComponent";
 
 export const BeaconInfoList = ({ beacon, onClick }) => {
@@ -109,7 +110,7 @@ export const BeaconInfoList = ({ beacon, onClick }) => {
         color="default"
         variant="Outlined"
         size='large'
-        onClick={onClick}
+        onClick={ onClick }
         style={{ marginTop: 16, padding: "1% 7%" }}
       >
         Back

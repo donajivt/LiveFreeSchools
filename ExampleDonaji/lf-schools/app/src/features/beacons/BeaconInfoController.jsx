@@ -1,40 +1,38 @@
 import { withReactive } from '@/reactive/withReactive';
-import { useParams } from "react-router-dom";
+
 import { BeaconInfoList } from "./BeaconInfoList";
 
 export const BeaconInfoController = withReactive((
-    { data }
+    { data, onClick, id }
 ) => {
-    const { id } = useParams();
 
-    const beacon = data?.beacons?.find(
-      (b) => b.id === id
-    );
-
-    const handleCancel = () => {
-      window.history.back();
-    };
+  const beacon = data?.beacon?.[0] || null;
 
     if (!beacon) return <p>Loading...</p>;
 
      return (
       <div className="beacon-detail-container">
-        <BeaconInfoList beacon={ beacon} onClick={handleCancel } />
+        <BeaconInfoList beacon={ beacon } onClick={ onClick } />
       </div>
     );
 
 },
 {
-    init: ({ services }) => {
-      services.beacons.getBeacons();
+    init: ({ services, id }) => {
+      id && services.beacons.getBeaconById({ id });
     },
-    queries: () => [
+    queries: ({ id }) => [
       {
         collection: "beacons",
-        name: "beacons",
+        name: "beacon",
+        where:{
+          op: '==',
+          field: 'id',
+          value: Number(id)
+        },
         defaultValue: [],
       },
     ],
-    monitors: () => ["getBeacons"],
+    monitors: () => ["getBeaconById"],
   }
 );
