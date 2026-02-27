@@ -5,7 +5,7 @@ import { withReactive } from "@/reactive/withReactive";
 import { BeaconForm } from "./BeaconForm";
 
 export const BeaconUpdateController = withReactive((
-    { data, services }
+    { data, services, monitors }
 ) => {
     const navigate = useNavigate();
     const { id } = useParams();

@@ -5,14 +5,15 @@ import { withReactive } from "@/reactive/withReactive";
 import { BeaconForm } from "./BeaconForm";
 
 export const BeaconCreateController = withReactive((
-    { services }
+    { services, monitors }
 ) => {
+    const isLoading = monitors.addBeacon;
     const navigate = useNavigate();
         return (<div>    
             <BeaconForm 
-                onSubmit={async (beacon) => {
-                    await services.beacons.addBeacon(beacon);
-                    navigate(RoutePaths.beacons.list());
+                onSubmit={(beacon) => {
+                    services.beacons.addBeacon(beacon);
+                    isLoading ? null : navigate(RoutePaths.beacons.list());
                 }}
                 onCancel={() => navigate(RoutePaths.beacons.list())}
                 beacon={null}
