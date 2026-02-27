@@ -27,19 +27,20 @@ namespace LiveFree.Beacons.API.Infrastructure.Repositories
                 .ExecuteDeleteAsync();
         }
 
-        public async Task UpdateAsync(Beacon beacon)
+        public async Task<bool> UpdateAsync(int id, Beacon dto)
         {
-            await _context.Beacons
-                .Where(b => b.Id == beacon.Id)
-                .ExecuteUpdateAsync(b => b
-                    .SetProperty(p => p.DeviceName, beacon.DeviceName)
-                    .SetProperty(p => p.BeaconType, beacon.BeaconType)
-                    .SetProperty(p => p.PhoneNumber, beacon.PhoneNumber)
-                    .SetProperty(p => p.DistrictId, beacon.DistrictId)
-                    .SetProperty(p => p.SchoolId, beacon.SchoolId)
-                    .SetProperty(p => p.FacultyId, beacon.FacultyId)
-                    .SetProperty(p => p.IsAvailable, beacon.IsAvailable)
-                );
+            var affectedRows = await _context.Beacons
+               .Where(b => b.Id == id)
+               .ExecuteUpdateAsync(b => b
+                   .SetProperty(p => p.DeviceName, dto.DeviceName)
+                   .SetProperty(p => p.BeaconType, dto.BeaconType)
+                   .SetProperty(p => p.PhoneNumber, dto.PhoneNumber)
+                   .SetProperty(p => p.DistrictId, dto.DistrictId)
+                   .SetProperty(p => p.SchoolId, dto.SchoolId)
+                   .SetProperty(p => p.FacultyId, dto.FacultyId)
+                   .SetProperty(p => p.IsAvailable, dto.IsAvailable)
+               );
+            return affectedRows > 0;
         }
 
         public async Task<Beacon?> GetByIdAsync(int id)

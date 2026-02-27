@@ -2,6 +2,7 @@ const db = {
   collection: (collectionName) => {
     return {
       bulkWrite: (data) => {
+        console.log("Data S", data);
         localStorage.setItem(collectionName, JSON.stringify(data));
         window.dispatchEvent(new Event("storage"));
       },

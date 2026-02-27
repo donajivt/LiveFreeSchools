@@ -1,41 +1,40 @@
-import { useParams, useNavigate } from "react-router-dom";
-
-import { RoutePaths } from "@/features/routing/RoutePaths";
 import { withReactive } from "@/reactive/withReactive";
 import { BeaconForm } from "./BeaconForm";
 
 export const BeaconUpdateController = withReactive((
-    { data, services, monitors }
+    { data, services, monitors, onCancel, onSubmit, id }
 ) => {
-    const navigate = useNavigate();
-    const { id } = useParams();
+    const isLoading = monitors.updateBeacon || monitors.getBeaconById;
+    const beacon = data.beacons?.[0] || null;
 
-    const beacon = data?.beacons?.find(
-    b => b.id === id
-    );
+    console.log("Beacon ", beacon);
 
   return (<div>    
             <BeaconForm 
-                onSubmit={(values) => {
-                    services.beacons.updateBeacon(values, { id });
-                    navigate(RoutePaths.beacons.list());
-                }}
-                onCancel={() => navigate(RoutePaths.beacons.list())}
+                onSubmit={(values) => onSubmit(services, values)}
+                onCancel={onCancel}
                 beacon={beacon}
+                isLoading= {isLoading}
             />        
         </div>);
     },
     {
-        init: ({services}) => {
-            services.beacons.getBeacons();
+        init: ({services, id}) => {
+            console.log("ID INIT ", id);
+            id && services.beacons.getBeaconById({id})
+            // services.beacons.getBeacons()
         },
-        queries: () => [
+        queries: ({id}) => [
             {
-                collection: 'beacons',
-                name: 'beacons',
-                defaultValue: [],
+                collection: "beacons",
+                name: "beacons",
+                where: {
+                    op: "==",
+                    field: "id",
+                    value: Number(id)
+                },
             }
         ],
-        monitors: () => (['updateBeacon', 'getBeacons']),
+        monitors: () => (['updateBeacon', 'getBeaconById']),
     }
 );

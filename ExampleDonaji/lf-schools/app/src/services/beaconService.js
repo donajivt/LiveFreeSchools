@@ -7,6 +7,9 @@ export const beaconReactor = {
       case "getBeacons":
         db.collection("beacons").bulkWrite(payload);
         break;
+      case "getBeaconById":
+        db.collection("beacons").bulkWrite([payload]);
+        break;
       case "addBeacon":
         db.collection("beacons").insertOne(payload);
         break;

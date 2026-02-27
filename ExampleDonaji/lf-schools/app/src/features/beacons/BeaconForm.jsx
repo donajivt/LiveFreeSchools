@@ -5,8 +5,10 @@ import { DividerComponent } from "@/shared/components/divider";
 
 const { Option } = Select;
 
-export const BeaconForm = ({ beacon, onSubmit, onCancel }) => {
+export const BeaconForm = ({ beacon, onSubmit, onCancel, isLoading }) => {
   const [form] = Form.useForm();
+
+  console.log("BEACON ", beacon);
 
   const handleFinish = (values) => {
     console.log("Form values:", values);

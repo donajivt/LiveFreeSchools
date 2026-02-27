@@ -63,16 +63,8 @@ namespace LiveFree.Beacons.API.Infrastructure.Services
 
         public async Task<bool> UpdateAsync(int id, BeaconDto dto)
         {
-            var existing = await _repository.GetByIdAsync(id);
-
-            if (existing == null)
-                return false;
-
-            _mapper.Map(dto, existing);
-
-            await _repository.UpdateAsync(existing);
-
-            return true;
+            var beacon = _mapper.Map<Beacon>(dto);
+            return await _repository.UpdateAsync(id, beacon);
         }
     }
 }

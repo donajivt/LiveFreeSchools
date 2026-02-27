@@ -125,7 +125,7 @@ namespace LiveFree.Beacons.API.Controllers
         }
 
         // Update Beacon - Only for ADMINISTRATOR role
-        [HttpPut("{id:int}")]
+        [HttpPut("{id}")]
         [Authorize(Roles = "ADMINISTRATOR")]
         public async Task<IActionResult> Update(int id, [FromBody] BeaconDto dto)
         {
@@ -133,9 +133,9 @@ namespace LiveFree.Beacons.API.Controllers
 
             try
             {
-                var success = await _service.UpdateAsync(id, dto);
+                var updatedBeacon = await _service.UpdateAsync(id, dto);
 
-                if (!success)
+                if (!updatedBeacon)
                 {
                     response.IsSuccess = false;
                     response.Message = "Beacon not found.";
@@ -143,7 +143,7 @@ namespace LiveFree.Beacons.API.Controllers
                 }
 
                 response.Message = "Beacon updated successfully.";
-                response.Result = dto;
+                response.Result = updatedBeacon;
 
                 return Ok(response);
             }
