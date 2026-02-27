@@ -24,16 +24,13 @@ export const withReactive = (Component, options) => {
       const _monitors = options.monitors();
       const handleOnStart = (event) => {
         setMonitors((prev) => ({ ...prev, [event.detail.action]: true }));
-        console.log("START", refreshKey);
       };
       const handleOnSuccess = (event) => {
         setMonitors((prev) => ({ ...prev, [event.detail.action]: false }));
-        console.log("TRUEEEE", refreshKey);
         setRefreshKey((prev) => prev + 1);
       };
       const handleOnError = (event) => {
         setMonitors((prev) => ({ ...prev, [event.detail.action]: false }));
-        console.log("FALSE", refreshKey);
       };
 
       _monitors.forEach((monitor) => {

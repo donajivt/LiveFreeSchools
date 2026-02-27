@@ -8,8 +8,6 @@ const { Option } = Select;
 export const BeaconForm = ({ beacon, onSubmit, onCancel, isLoading }) => {
   const [form] = Form.useForm();
 
-  console.log("BEACON ", beacon);
-
   const handleFinish = (values) => {
     console.log("Form values:", values);
     if (onSubmit) onSubmit(values);

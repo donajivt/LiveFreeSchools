@@ -7,8 +7,6 @@ export const BeaconUpdateController = withReactive((
     const isLoading = monitors.updateBeacon || monitors.getBeaconById;
     const beacon = data.beacons?.[0] || null;
 
-    console.log("Beacon ", beacon);
-
   return (<div>    
             <BeaconForm 
                 onSubmit={(values) => onSubmit(services, values)}
@@ -20,9 +18,7 @@ export const BeaconUpdateController = withReactive((
     },
     {
         init: ({services, id}) => {
-            console.log("ID INIT ", id);
             id && services.beacons.getBeaconById({id})
-            // services.beacons.getBeacons()
         },
         queries: ({id}) => [
             {

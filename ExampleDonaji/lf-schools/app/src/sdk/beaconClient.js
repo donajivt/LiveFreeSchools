@@ -64,7 +64,6 @@ export const beaconClient ={
     },
     getBeaconById: async ({ id }) => {
         try{
-            console.log("ID CLIENT ", id);
             const response = await apiClient.get(`Beacon/${id}`);
             if (!response.data.isSuccess) {
                 message.error(response.data.message);
