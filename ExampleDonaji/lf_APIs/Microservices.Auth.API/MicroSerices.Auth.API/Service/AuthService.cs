@@ -3,6 +3,7 @@ using MicroSerices.Auth.API.Models;
 using MicroSerices.Auth.API.Models.Dto;
 using MicroSerices.Auth.API.Service.IService;
 using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 namespace MicroSerices.Auth.API.Service
 {
@@ -38,6 +39,16 @@ namespace MicroSerices.Auth.API.Service
             return false;
         }
 
+        public async Task<bool> Logout(string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null) return false;
+
+            user.RefreshToken = null;
+            await _userManager.UpdateAsync(user);
+
+            return true;
+        }
         public async Task<LoginResponseDto> Login(LoginRequestDto loginRequestDto)
         {
             var user = _appDbContext.ApplicationUsers
@@ -45,19 +56,26 @@ namespace MicroSerices.Auth.API.Service
 
             if (user == null)
             {
-                return new LoginResponseDto() { User = null, Token = "" };
+                return new LoginResponseDto() { User = null, AccessToken = "" };
             }
 
             bool isValid = await _userManager.CheckPasswordAsync(user, loginRequestDto.Password);
 
             if (!isValid)
             {
-                return new LoginResponseDto() { User = null, Token = "" };
+                return new LoginResponseDto() { User = null, AccessToken = "" };
             }
             //consultamos los roles del usuario
             var roles = await _userManager.GetRolesAsync(user);
             //si el usuario es encontrado se genera el token
             var token = _jwtTokenGenerator.GenerateToken(user, roles);
+
+            var refreshToken = _jwtTokenGenerator.GenerateRefreshToken();
+
+            user.RefreshToken = refreshToken;
+            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
+
+            await _userManager.UpdateAsync(user);
             UserDto userDto = new()
             {
                 Email = user.Email,
@@ -68,9 +86,48 @@ namespace MicroSerices.Auth.API.Service
             LoginResponseDto loginResponseDto = new LoginResponseDto()
             {
                 User = userDto,
-                Token = token
+                AccessToken = token,
+                RefreshToken = refreshToken
             };
             return loginResponseDto;
+        }
+        public async Task<LoginResponseDto> RefreshToken(string refreshToken)
+        {
+            var user = _userManager.Users
+                .FirstOrDefault(u => u.RefreshToken == refreshToken);
+
+            if (user == null ||
+                user.RefreshTokenExpiryTime <= DateTime.UtcNow)
+            {
+                return new LoginResponseDto
+                {
+                    User = null,
+                    AccessToken = ""
+                };
+            }
+
+            var roles = await _userManager.GetRolesAsync(user);
+
+            var newAccessToken = _jwtTokenGenerator.GenerateToken(user, roles);
+            var newRefreshToken = _jwtTokenGenerator.GenerateRefreshToken();
+
+            user.RefreshToken = newRefreshToken;
+            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
+
+            await _userManager.UpdateAsync(user);
+
+            return new LoginResponseDto
+            {
+                AccessToken = newAccessToken,
+                RefreshToken = newRefreshToken,
+                User = new UserDto
+                {
+                    Email = user.Email,
+                    Id = user.Id,
+                    Name = user.Name,
+                    PhoneNumber = user.PhoneNumber
+                }
+            };
         }
 
         public async Task<String> Register(RegistrationRequestDto registrationRequestDto)

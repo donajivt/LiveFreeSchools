@@ -8,7 +8,7 @@ export const authReactor = {
         db.collection("auth").bulkWrite(payload);
         break;
       case "login":
-        localStorage.setItem("token", payload.token);
+        localStorage.setItem("accessToken", payload.accessToken);
         db.collection("auth").bulkWrite(payload);
         break;
       case "assignRole":

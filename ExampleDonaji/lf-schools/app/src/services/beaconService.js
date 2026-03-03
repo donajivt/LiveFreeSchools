@@ -14,7 +14,7 @@ export const beaconReactor = {
         db.collection("beacons").insertOne(payload);
         break;
       case "updateBeacon":
-        db.collection("beacons").update({ id: params[1].id }, payload);
+        db.collection("beacons").update({ id: params[0].id }, payload);
         break;
       case "deleteBeacon":
         db.collection("beacons").deleteOne({ id: params[0].id });

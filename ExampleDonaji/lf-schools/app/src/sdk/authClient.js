@@ -8,7 +8,7 @@ const apiClient = axios.create({
 export const authClient = {
     login: async (credentials) => {
         try{
-            const response = await apiClient.post("AuthApp/login", credentials);
+            const response = await apiClient.post("auth/login", credentials);
             if (!response.data.isSuccess) {
                 message.error(response.data.message);
                 throw new Error(response.data.message);
@@ -24,7 +24,7 @@ export const authClient = {
 
     register: async (data) => {
         try{
-            const response = await apiClient.post("AuthApp/register", data);
+            const response = await apiClient.post("auth/register", data);
             if (!response.data.isSuccess) {
                 message.error(response.data.message);
                 throw new Error(response.data.message);
@@ -40,7 +40,7 @@ export const authClient = {
 
     assignRole: async (data) => {
         try{
-            const response = await apiClient.post("AuthApp/assignRole", data);
+            const response = await apiClient.post("auth/assignRole", data);
             if (!response.data.isSuccess) {
                 message.error(response.data.message);
                 throw new Error(response.data.message);

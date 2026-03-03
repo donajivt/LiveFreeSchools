@@ -11,7 +11,7 @@ export const BeaconInfoController = withReactive((
     if (!beacon) return <p>Loading...</p>;
 
      return (
-      <div className="beacon-detail-container">
+      <div>
         <BeaconInfoList beacon={ beacon } onClick={ onClick } />
       </div>
     );

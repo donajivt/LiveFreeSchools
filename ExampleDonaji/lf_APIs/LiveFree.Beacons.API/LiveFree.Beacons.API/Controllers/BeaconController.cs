@@ -7,11 +7,11 @@ namespace LiveFree.Beacons.API.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    public class BeaconController : ControllerBase
+    public class beaconController : ControllerBase
     {
         private readonly IBeaconService _service;
 
-        public BeaconController(IBeaconService service)
+        public beaconController(IBeaconService service)
         {
             _service = service;
         }

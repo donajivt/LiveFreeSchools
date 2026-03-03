@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "LiveFree.Beacons.API.Controllers.BeaconController",
+    "ContainingType": "LiveFree.Beacons.API.Controllers.beaconController",
     "Method": "GetAll",
-    "RelativePath": "api/Beacon",
+    "RelativePath": "api/beacon",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -10,9 +10,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "LiveFree.Beacons.API.Controllers.BeaconController",
+    "ContainingType": "LiveFree.Beacons.API.Controllers.beaconController",
     "Method": "Create",
-    "RelativePath": "api/Beacon",
+    "RelativePath": "api/beacon",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -26,9 +26,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "LiveFree.Beacons.API.Controllers.BeaconController",
+    "ContainingType": "LiveFree.Beacons.API.Controllers.beaconController",
     "Method": "GetById",
-    "RelativePath": "api/Beacon/{id}",
+    "RelativePath": "api/beacon/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -42,9 +42,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "LiveFree.Beacons.API.Controllers.BeaconController",
+    "ContainingType": "LiveFree.Beacons.API.Controllers.beaconController",
     "Method": "Update",
-    "RelativePath": "api/Beacon/{id}",
+    "RelativePath": "api/beacon/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -63,9 +63,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "LiveFree.Beacons.API.Controllers.BeaconController",
+    "ContainingType": "LiveFree.Beacons.API.Controllers.beaconController",
     "Method": "Delete",
-    "RelativePath": "api/Beacon/{id}",
+    "RelativePath": "api/beacon/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -79,9 +79,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "LiveFree.Beacons.API.Controllers.BeaconController",
+    "ContainingType": "LiveFree.Beacons.API.Controllers.beaconController",
     "Method": "DebugClaims",
-    "RelativePath": "api/Beacon/debug",
+    "RelativePath": "api/beacon/debug",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -89,9 +89,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "LiveFree.Beacons.API.Controllers.BeaconController",
+    "ContainingType": "LiveFree.Beacons.API.Controllers.beaconController",
     "Method": "GetByDeviceName",
-    "RelativePath": "api/Beacon/device/{deviceName}",
+    "RelativePath": "api/beacon/device/{deviceName}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
