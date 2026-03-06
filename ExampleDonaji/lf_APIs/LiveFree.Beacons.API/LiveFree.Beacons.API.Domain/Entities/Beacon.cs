@@ -6,7 +6,7 @@
 
         public string DeviceName { get; set; } = string.Empty;
 
-        public string BeaconType { get; set; } = string.Empty;
+        public int BeaconType { get; set; } = 0;
 
         public long PhoneNumber { get; set; }
 

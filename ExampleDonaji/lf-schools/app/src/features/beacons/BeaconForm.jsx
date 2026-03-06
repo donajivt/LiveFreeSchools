@@ -14,12 +14,12 @@ export const BeaconForm = ({ beacon, onSubmit, onCancel, isLoading }) => {
   };
 
   useEffect(() => {
-  if (beacon) {
-    form.setFieldsValue(beacon);
-  } else {
-    form.resetFields();
-  }
-}, [beacon, form]);
+    if (beacon) {
+        form.setFieldsValue(beacon);
+    } else {
+        form.resetFields();
+    }
+    }, [beacon, form]);
 
   const size = "large";
 

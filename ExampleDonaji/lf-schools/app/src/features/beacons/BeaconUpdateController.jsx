@@ -9,7 +9,7 @@ export const BeaconUpdateController = withReactive((
 
   return (<div>    
             <BeaconForm 
-                onSubmit={(values) => onSubmit(services, values)}
+                onSubmit={(values) => onSubmit( services, values )}
                 onCancel={onCancel}
                 beacon={beacon}
                 isLoading= {isLoading}

@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C77E1D40-EF1C-43A5-A880-15004B5F3478}|LiveFree.Beacons.API.Domain\\LiveFree.Beacons.API.Domain.csproj|c:\\users\\vania\\onedrive\\documentos\\livefreeschools\\prueba\\livefreeschools\\exampledonaji\\lf_apis\\livefree.beacons.api\\livefree.beacons.api.domain\\entities\\beacon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C77E1D40-EF1C-43A5-A880-15004B5F3478}|LiveFree.Beacons.API.Domain\\LiveFree.Beacons.API.Domain.csproj|solutionrelative:livefree.beacons.api.domain\\entities\\beacon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14D82FE4-AE7B-4640-A684-4DE0C4ED5544}|LiveFree.Beacons.API.Application\\LiveFree.Beacons.API.Application.csproj|c:\\users\\vania\\onedrive\\documentos\\livefreeschools\\prueba\\livefreeschools\\exampledonaji\\lf_apis\\livefree.beacons.api\\livefree.beacons.api.application\\dtos\\beacondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14D82FE4-AE7B-4640-A684-4DE0C4ED5544}|LiveFree.Beacons.API.Application\\LiveFree.Beacons.API.Application.csproj|solutionrelative:livefree.beacons.api.application\\dtos\\beacondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1E8B6114-3BBA-4827-AC31-3806D37C99B7}|LiveFree.Beacons.API\\LiveFree.Beacons.API.csproj|c:\\users\\vania\\onedrive\\documentos\\livefreeschools\\prueba\\livefreeschools\\exampledonaji\\lf_apis\\livefree.beacons.api\\livefree.beacons.api\\controllers\\beaconcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E8B6114-3BBA-4827-AC31-3806D37C99B7}|LiveFree.Beacons.API\\LiveFree.Beacons.API.csproj|solutionrelative:livefree.beacons.api\\controllers\\beaconcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +42,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Beacon.cs",
+              "DocumentMoniker": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Domain\\Entities\\Beacon.cs",
+              "RelativeDocumentMoniker": "LiveFree.Beacons.API.Domain\\Entities\\Beacon.cs",
+              "ToolTip": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Domain\\Entities\\Beacon.cs",
+              "RelativeToolTip": "LiveFree.Beacons.API.Domain\\Entities\\Beacon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T03:45:25.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BeaconDto.cs",
+              "DocumentMoniker": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Application\\Dtos\\BeaconDto.cs",
+              "RelativeDocumentMoniker": "LiveFree.Beacons.API.Application\\Dtos\\BeaconDto.cs",
+              "ToolTip": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Application\\Dtos\\BeaconDto.cs",
+              "RelativeToolTip": "LiveFree.Beacons.API.Application\\Dtos\\BeaconDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T04:26:00.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "IBeaconService.cs",
               "DocumentMoniker": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Application\\Interfaces\\IBeaconService.cs",
               "RelativeDocumentMoniker": "LiveFree.Beacons.API.Application\\Interfaces\\IBeaconService.cs",
@@ -46,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "IBeaconRepository.cs",
               "DocumentMoniker": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Application\\Interfaces\\IBeaconRepository.cs",
               "RelativeDocumentMoniker": "LiveFree.Beacons.API.Application\\Interfaces\\IBeaconRepository.cs",
@@ -58,25 +92,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "BeaconService.cs",
               "DocumentMoniker": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Infrastructure\\Services\\BeaconService.cs",
               "RelativeDocumentMoniker": "LiveFree.Beacons.API.Infrastructure\\Services\\BeaconService.cs",
               "ToolTip": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API.Infrastructure\\Services\\BeaconService.cs",
               "RelativeToolTip": "LiveFree.Beacons.API.Infrastructure\\Services\\BeaconService.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAUwDMAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAiwBMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T01:31:09.015Z"
+              "WhenOpened": "2026-02-26T01:31:09.015Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "BeaconController.cs",
               "DocumentMoniker": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API\\Controllers\\BeaconController.cs",
               "RelativeDocumentMoniker": "LiveFree.Beacons.API\\Controllers\\BeaconController.cs",
               "ToolTip": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\LiveFree.Beacons.API\\LiveFree.Beacons.API\\Controllers\\BeaconController.cs",
               "RelativeToolTip": "LiveFree.Beacons.API\\Controllers\\BeaconController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAKAAAAAAAAAAAAA2wMIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-26T03:38:36.349Z",
               "EditorCaption": ""
