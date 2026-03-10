@@ -9,9 +9,8 @@ namespace LiveFree.Beacons.API.Infrastructure.Persistence
         {
         }
         public DbSet<Beacon> Beacons { get; set; }
-
+        public DbSet<BeaconType> BeaconTypes { get; set; }
         public DbSet<BeaconLocation> BeaconLocations { get; set; }
-
         public DbSet<BeaconEvent> BeaconEvents { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

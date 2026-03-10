@@ -191,5 +191,27 @@ namespace LiveFree.Beacons.API.Controllers
             var claims = User.Claims.Select(c => new { c.Type, c.Value });
             return Ok(claims);
         }
+
+        [HttpGet]
+        [Authorize]
+        [Route("types")]
+        public async Task<IActionResult> getBeaconTypes() {
+            var response = new ResponseDto();
+
+            try
+            {
+                var result = await _service.GetAllTypesAsync();
+
+                response.Result = result;
+                response.Message = "Beacons type retrieved successfully.";
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+                return StatusCode(500, response);
+            }
+        }
     }
 }

@@ -46,22 +46,35 @@ namespace LiveFree.Beacons.API.Infrastructure.Repositories
         public async Task<Beacon?> GetByIdAsync(int id)
         {
             return await _context.Beacons
+                .Include(b => b.BeaconTypeNavigation)
                 .Include(b => b.Locations)
                 .Include(b => b.Events)
+                .FirstOrDefaultAsync(b => b.Id == id);
+        }
+        public async Task<BeaconType?> GetTypeByIdAsync(int id)
+        {
+            return await _context.BeaconTypes
                 .FirstOrDefaultAsync(b => b.Id == id);
         }
 
         public async Task<IEnumerable<Beacon>> GetAllAsync()
         {
             return await _context.Beacons
+                .Include(b => b.BeaconTypeNavigation)
                 .Include(b => b.Locations)
                 .Include(b => b.Events)
+                .ToListAsync();
+        }
+        public async Task<IEnumerable<BeaconType>> GetAllTypesAsync()
+        {
+            return await _context.BeaconTypes
                 .ToListAsync();
         }
 
         public async Task<Beacon?> GetByDeviceNameAsync(string deviceName)
         {
             return await _context.Beacons
+               .Include(b => b.BeaconTypeNavigation)
                .Include(b => b.Locations)
                .Include(b => b.Events)
                .FirstOrDefaultAsync(b => b.DeviceName == deviceName);

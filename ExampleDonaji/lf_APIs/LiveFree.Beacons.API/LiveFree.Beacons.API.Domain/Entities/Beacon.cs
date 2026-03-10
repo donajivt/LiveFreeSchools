@@ -1,4 +1,6 @@
-﻿namespace LiveFree.Beacons.API.Domain.Entities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace LiveFree.Beacons.API.Domain.Entities
 {
     public class Beacon
     {
@@ -20,6 +22,8 @@
 
         //Navigation properties
 
+        [ForeignKey(nameof(BeaconType))]
+        public BeaconType BeaconTypeNavigation { get; set; }
         public ICollection<BeaconLocation>? Locations { get; set; }
 
         public ICollection<BeaconEvent>? Events { get; set; }

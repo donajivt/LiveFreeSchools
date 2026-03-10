@@ -105,6 +105,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LiveFree.Beacons.API.Controllers.beaconController",
+    "Method": "getBeaconTypes",
+    "RelativePath": "api/beacon/types",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LiveFree.Beacons.API.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

@@ -1,4 +1,6 @@
-﻿namespace LiveFree.Beacons.API.Application.Dtos
+﻿using LiveFree.Beacons.API.Domain.Entities;
+
+namespace LiveFree.Beacons.API.Application.Dtos
 {
     public class BeaconDto
     {
@@ -7,6 +9,7 @@
         public string DeviceName { get; set; } = string.Empty;
 
         public int BeaconType { get; set; } = 1;
+        public string BeaconTypeName { get; set; } = string.Empty;
 
         public long PhoneNumber { get; set; }
 
@@ -17,6 +20,8 @@
         public int? FacultyId { get; set; }
 
         public bool IsAvailable { get; set; }
+        public string Available =>
+            IsAvailable ? "Available" : "Not Available";
 
         public List<BeaconLocationDto>? Locations { get; set; }
 

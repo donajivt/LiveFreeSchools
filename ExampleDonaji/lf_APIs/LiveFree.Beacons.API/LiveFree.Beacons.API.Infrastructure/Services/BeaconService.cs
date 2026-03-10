@@ -66,5 +66,20 @@ namespace LiveFree.Beacons.API.Infrastructure.Services
             var beacon = _mapper.Map<Beacon>(dto);
             return await _repository.UpdateAsync(id, beacon);
         }
+        public async Task<IEnumerable<BeaconTypeDto>> GetAllTypesAsync()
+        {
+            var types = await _repository.GetAllTypesAsync();
+
+            return _mapper.Map<IEnumerable<BeaconTypeDto>>(types);
+        }
+        public async Task<BeaconTypeDto> GetTypeByIdAsync(int id)
+        {
+            var _type = await _repository.GetTypeByIdAsync(id);
+
+            if (_type == null)
+                return null;
+
+            return _mapper.Map<BeaconTypeDto>(_type);
+        }
     }
 }

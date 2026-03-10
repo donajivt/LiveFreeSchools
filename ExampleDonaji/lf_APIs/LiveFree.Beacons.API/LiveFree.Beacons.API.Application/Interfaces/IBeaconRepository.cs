@@ -10,5 +10,7 @@ namespace LiveFree.Beacons.API.Application.Interfaces
         Task<Beacon> GetByIdAsync(int id);
         Task<Beacon?> GetByDeviceNameAsync(string deviceName);
         Task<IEnumerable<Beacon>> GetAllAsync();
+        Task<IEnumerable<BeaconType>> GetAllTypesAsync();
+        Task<BeaconType?> GetTypeByIdAsync(int id);
     }
 }
