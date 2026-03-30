@@ -1,0 +1,295 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Services\\Livefree.Schools.Services.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Common\\Livefree.Schools.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Common\\Livefree.Schools.Common.csproj",
+        "projectName": "Livefree.Schools.Common",
+        "projectPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Common\\Livefree.Schools.Common.csproj",
+        "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vania\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Models\\Livefree.Schools.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Models\\Livefree.Schools.Models.csproj",
+        "projectName": "Livefree.Schools.Models",
+        "projectPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Models\\Livefree.Schools.Models.csproj",
+        "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vania\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Repositories\\Livefree.Schools.Repositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Repositories\\Livefree.Schools.Repositories.csproj",
+        "projectName": "Livefree.Schools.Repositories",
+        "projectPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Repositories\\Livefree.Schools.Repositories.csproj",
+        "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Repositories\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vania\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Common\\Livefree.Schools.Common.csproj": {
+                "projectPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Common\\Livefree.Schools.Common.csproj"
+              },
+              "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Models\\Livefree.Schools.Models.csproj": {
+                "projectPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Models\\Livefree.Schools.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.14, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Services\\Livefree.Schools.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Services\\Livefree.Schools.Services.csproj",
+        "projectName": "Livefree.Schools.Services",
+        "projectPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Services\\Livefree.Schools.Services.csproj",
+        "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vania\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Common\\Livefree.Schools.Common.csproj": {
+                "projectPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Common\\Livefree.Schools.Common.csproj"
+              },
+              "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Models\\Livefree.Schools.Models.csproj": {
+                "projectPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Models\\Livefree.Schools.Models.csproj"
+              },
+              "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Repositories\\Livefree.Schools.Repositories.csproj": {
+                "projectPath": "C:\\Users\\vania\\OneDrive\\Documentos\\LiveFreeSchools\\Prueba\\LiveFreeSchools\\ExampleDonaji\\lf_APIs\\Livefree.Schools.Repositories\\Livefree.Schools.Repositories.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

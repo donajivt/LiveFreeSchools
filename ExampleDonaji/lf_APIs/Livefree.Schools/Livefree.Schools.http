@@ -1,0 +1,6 @@
+@Livefree.Schools_HostAddress = http://localhost:5186
+
+GET {{Livefree.Schools_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

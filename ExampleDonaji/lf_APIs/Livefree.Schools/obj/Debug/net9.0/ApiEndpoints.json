@@ -1,0 +1,125 @@
+[
+  {
+    "ContainingType": "Livefree.Schools.Host.Routes.BeaconsRoutes\u002B\u003C\u003Ec",
+    "Method": "\u003CMapBeacons\u003Eb__0_0",
+    "RelativePath": "beacons/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "where",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.ICollection\u00601[[Livefree.Schools.Models.BeaconModel, Livefree.Schools.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetBeacons"
+  },
+  {
+    "ContainingType": "Livefree.Schools.Host.Routes.BeaconsRoutes\u002B\u003C\u003Ec",
+    "Method": "\u003CMapBeacons\u003Eb__0_2",
+    "RelativePath": "beacons/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Livefree.Schools.Models.BeaconModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Livefree.Schools.Models.BeaconModel",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateBeacon"
+  },
+  {
+    "ContainingType": "Livefree.Schools.Host.Routes.BeaconsRoutes\u002B\u003C\u003Ec",
+    "Method": "\u003CMapBeacons\u003Eb__0_3",
+    "RelativePath": "beacons/",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Livefree.Schools.Models.BeaconModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Livefree.Schools.Models.BeaconModel",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "UpdateBeacon"
+  },
+  {
+    "ContainingType": "Livefree.Schools.Host.Routes.BeaconsRoutes\u002B\u003C\u003Ec",
+    "Method": "\u003CMapBeacons\u003Eb__0_1",
+    "RelativePath": "beacons/{id:Guid}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Livefree.Schools.Models.BeaconModel",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetBeaconById"
+  },
+  {
+    "ContainingType": "Livefree.Schools.Host.Routes.BeaconsRoutes\u002B\u003C\u003Ec",
+    "Method": "\u003CMapBeacons\u003Eb__0_4",
+    "RelativePath": "beacons/{id:Guid}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "DeleteBeacon"
+  }
+]

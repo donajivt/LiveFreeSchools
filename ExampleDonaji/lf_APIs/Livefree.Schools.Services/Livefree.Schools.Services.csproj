@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Livefree.Schools.Common\Livefree.Schools.Common.csproj" />
+    <ProjectReference Include="..\Livefree.Schools.Models\Livefree.Schools.Models.csproj" />
+    <ProjectReference Include="..\Livefree.Schools.Repositories\Livefree.Schools.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>

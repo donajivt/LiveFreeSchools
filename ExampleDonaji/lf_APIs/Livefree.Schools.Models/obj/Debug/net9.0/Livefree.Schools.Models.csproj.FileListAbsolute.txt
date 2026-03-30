@@ -1,0 +1,12 @@
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\Livefree.Schools.Models\bin\Debug\net9.0\Livefree.Schools.Models.deps.json
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\Livefree.Schools.Models\bin\Debug\net9.0\Livefree.Schools.Models.dll
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\Livefree.Schools.Models\bin\Debug\net9.0\Livefree.Schools.Models.pdb
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\Livefree.Schools.Models\obj\Debug\net9.0\Livefree.Schools.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\Livefree.Schools.Models\obj\Debug\net9.0\Livefree.Schools.Models.AssemblyInfoInputs.cache
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\Livefree.Schools.Models\obj\Debug\net9.0\Livefree.Schools.Models.AssemblyInfo.cs
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\Livefree.Schools.Models\obj\Debug\net9.0\Livefree.Schools.Models.csproj.CoreCompileInputs.cache
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\Livefree.Schools.Models\obj\Debug\net9.0\Livefree.Schools.Models.sourcelink.json
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\Livefree.Schools.Models\obj\Debug\net9.0\Livefree.Schools.Models.dll
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\Livefree.Schools.Models\obj\Debug\net9.0\refint\Livefree.Schools.Models.dll
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\Livefree.Schools.Models\obj\Debug\net9.0\Livefree.Schools.Models.pdb
+C:\Users\vania\OneDrive\Documentos\LiveFreeSchools\Prueba\LiveFreeSchools\ExampleDonaji\lf_APIs\Livefree.Schools.Models\obj\Debug\net9.0\ref\Livefree.Schools.Models.dll

@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>ef412f37-4ca2-470e-a2c8-e124b68e26ed</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.14" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="9.0.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="9.0.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Livefree.Schools.Common\Livefree.Schools.Common.csproj" />
+    <ProjectReference Include="..\Livefree.Schools.Models\Livefree.Schools.Models.csproj" />
+    <ProjectReference Include="..\Livefree.Schools.Repositories\Livefree.Schools.Repositories.csproj" />
+    <ProjectReference Include="..\Livefree.Schools.Services\Livefree.Schools.Services.csproj" />
+  </ItemGroup>
+
+</Project>

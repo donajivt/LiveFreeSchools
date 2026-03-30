@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Livefree.Schools.Common/1.0.0": {
+        "runtime": {
+          "Livefree.Schools.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Livefree.Schools.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
